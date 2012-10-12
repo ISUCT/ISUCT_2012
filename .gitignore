@@ -6,7 +6,9 @@
 *.ear
 
 #netbeans ignore personal stuff 
-nbproject/private/
+nbproject/
+build.xml
+manifest.mf
 
 #eclipse ignore personal stuff
 #.project
@@ -27,3 +29,4 @@ tmp/**/*
 *.tmp
 *.bak
 
+/build/
