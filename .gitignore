@@ -9,7 +9,7 @@
 nbproject/private/
 
 #eclipse ignore personal stuff
-.project
+#.project
 .metadata
 bin/**
 tmp/**
