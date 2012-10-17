@@ -16,13 +16,12 @@ public class HelloWorld {
 	 */
 	public static void main(String [] args){
 		//Объявляем и инициализируем переменные
-		float x = 1.25f; 
-		float a = 1.1f;
-		float b = 2.0f;
+		float x = 1.1f; 
+		float b = 2.5f;
 		//вычисляем числитель Math.pow(число, степень)
-		double chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
+		double chisl =1+ Math.sin(Math.pow(b, 3))  + Math.pow(x, 3);
 		//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-		double znamen = Math.log(a+x)/Math.log(2);
+		double znamen = Math.pow(Math.pow(b, 3)  + Math.pow(x, 3),(1/3f));
 		//вычисляем y
 		double y = chisl/znamen;
 		//Выводим результат
@@ -31,16 +30,28 @@ public class HelloWorld {
 		//повторяем вычисления для второго значения х, но следует помнить. что переменные мы уже объявляли
 		//повторно их объявлять не надо, а надо только присвоить новые значени		
 		
-		x=2.5f;
-		chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
-		znamen = Math.log(a+x)/Math.log(2);
+		x=2.4f;
+		chisl = 1+ Math.sin(Math.pow(b, 3))  + Math.pow(x, 3);
+		znamen = Math.pow(Math.pow(b, 3)  + Math.pow(x, 3),(1/3f));
 		y = chisl/znamen;
 		System.out.println("X = "+x+" Y = "+y);
 		
 		//И для третьего значения так же и т.д (про циклы мы пока ничего не знаем)
-		x=3.7f;
-		chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
-		znamen = Math.log(a+x)/Math.log(2);
+		x=3.6f;
+		chisl = 1+ Math.sin(Math.pow(b, 3))  + Math.pow(x, 3);
+		znamen = Math.pow(Math.pow(b, 3)  + Math.pow(x, 3),(1/3f));
+		y = chisl/znamen;
+		System.out.println("Дано = "+x+" Посчитано = "+y);
+                
+                x=1.7f;
+		chisl = 1+ Math.sin(Math.pow(b, 3))  + Math.pow(x, 3);
+		znamen = Math.pow(Math.pow(b, 3)  + Math.pow(x, 3),(1/3f));
+		y = chisl/znamen;
+		System.out.println("Дано = "+x+" Посчитано = "+y);
+                
+                x=3.9f;
+		chisl = 1+ Math.sin(Math.pow(b, 3))  + Math.pow(x, 3);
+		znamen = Math.pow(Math.pow(b, 3)  + Math.pow(x, 3),(1/3f));
 		y = chisl/znamen;
 		System.out.println("Дано = "+x+" Посчитано = "+y);
 	}
