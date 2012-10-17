@@ -16,13 +16,15 @@ public class HelloWorld {
 	 */
 	public static void main(String [] args){
 		//Объявляем и инициализируем переменные
-		float x = 1.25f; 
-		float a = 1.1f;
-		float b = 2.0f;
+		float x = 2.2f; 
+		float a = 2.0f;
+		float b = 0.95f;
+                float e = 2.7f;
 		//вычисляем числитель Math.pow(число, степень)
-		double chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
+		double chisl;
+                chisl = 1 + Math.pow(Math.log10(x/2),2);
 		//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-		double znamen = Math.log(a+x)/Math.log(2);
+		double znamen = b - Math.pow(e ,x/a);
 		//вычисляем y
 		double y = chisl/znamen;
 		//Выводим результат
@@ -31,16 +33,28 @@ public class HelloWorld {
 		//повторяем вычисления для второго значения х, но следует помнить. что переменные мы уже объявляли
 		//повторно их объявлять не надо, а надо только присвоить новые значени		
 		
-		x=2.5f;
-		chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
-		znamen = Math.log(a+x)/Math.log(2);
+		x=3.78f;
+		chisl = 1 + Math.pow(Math.log10(x/2),2);
+		znamen = b - Math.pow(e ,x/a);
 		y = chisl/znamen;
 		System.out.println("X = "+x+" Y = "+y);
 		
 		//И для третьего значения так же и т.д (про циклы мы пока ничего не знаем)
-		x=3.7f;
-		chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
-		znamen = Math.log(a+x)/Math.log(2);
+		x=4.51f;
+		chisl = 1 + Math.pow(Math.log10(x/2),2);
+		znamen = b - Math.pow(e ,x/a);
+		y = chisl/znamen;
+		System.out.println("Дано = "+x+" Посчитано = "+y);
+                
+                x=6.58f;
+		chisl = 1 + Math.pow(Math.log10(x/2),2);
+		znamen = b - Math.pow(e ,x/a);
+		y = chisl/znamen;
+		System.out.println("Дано = "+x+" Посчитано = "+y);
+                
+                x=1.2f;
+		chisl = 1 + Math.pow(Math.log10(x/2),2);
+		znamen = b - Math.pow(e ,x/a);
 		y = chisl/znamen;
 		System.out.println("Дано = "+x+" Посчитано = "+y);
 	}
