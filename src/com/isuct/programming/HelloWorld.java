@@ -2,43 +2,42 @@ package com.isuct.programming;
 
 public class HelloWorld {
 
-	public static void main(String [] args){
-    
-float x = 1.9f;
-float a = 4.1f;
-float b = 2.7f;
+public static void main(String[] args){
+float x = 0.15f;
+float a = 0.05f;
+float b = 0.06f;
 double chisl;
-chisl = (a)*Math.pow((x),(1/2))- (b)* Math.log(x)/ Math.log(5);
+chisl = Math.acos((x-b)*(x+b));
 double znamen;
-znamen = Math.log(x-1)/ Math.log(10);
+znamen = Math.asin((x-a)*(x+a));
 double y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
 
-x = 2.15f;
-chisl = (a)*Math.pow((x),(1/2))- (b)* Math.log(x)/ Math.log(5);
-znamen = Math.log(x-1)/ Math.log(10);
+x = 0.26f;
+chisl = Math.acos((x-b)*(x+b));
+znamen = Math.asin((x-a)*(x+a));
 y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
 
-x = 2.34f;
-chisl = (a)*Math.pow((x),(1/2))- (b)* Math.log(x)/ Math.log(5);
-znamen = Math.log(x-1)/ Math.log(10);
+x = 0.37f;
+chisl = Math.acos((x-b)*(x+b));
+znamen = Math.asin((x-a)*(x+a));
 y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
 
-x = 2.73f;
-chisl = (a)*Math.pow((x),(1/2))- (b)* Math.log(x)/ Math.log(5);
-znamen = Math.log(x-1)/ Math.log(10);
+x = 0.48f;
+chisl = Math.acos((x-b)*(x+b));
+znamen = Math.asin((x-a)*(x+a));
 y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
 
-x = 3.16f;
-chisl = (a)*Math.pow((x),(1/2))- (b)* Math.log(x)/ Math.log(5);
-znamen = Math.log(x-1)/ Math.log(10);
+x = 0.56f;
+chisl = Math.acos((x-b)*(x+b));
+znamen = Math.asin((x-a)*(x+a));
 y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
+
 
 }
-    
-    
+
 }
