@@ -3,42 +3,38 @@ package com.isuct.programming;
 public class HelloWorld {
 
 	public static void main(String[] args){
-float x = 4.48f;
-float a = 0.4f;
-float b = 0.8f;
+float x = 1.1f;
+float b = 2.5f;
 double chisl;
-chisl = Math.pow((a),(x))- Math.pow ((b),(x));
+chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
 double znamen;
-znamen = Math.log(a/b)/ Math.log(10);
-double y = chisl/znamen * Math.pow ((a*b),(1/3));
+znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
+double y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
 
-x = 3.56f;
-chisl = Math.pow((a),(x))- Math.pow ((b),(x));
-znamen = Math.log(a/b)/ Math.log(10);
-y = chisl/znamen * Math.pow ((a*b),(1/3));
+x = 2.4f;
+chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
+znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
+y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
 
-
-
-x = 2.78f;
-chisl = Math.pow((a),(x))- Math.pow ((b),(x));
-znamen = Math.log(a/b)/ Math.log(10);
-y = chisl/znamen * Math.pow ((a*b),(1/3));
+x = 3.6f;
+chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
+znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
+y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
 
-x = 5.28f;
-chisl = Math.pow((a),(x))- Math.pow ((b),(x));
-znamen = Math.log(a/b)/ Math.log(10);
-y = chisl/znamen * Math.pow ((a*b),(1/3));
+x = 1.7f;
+chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
+znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
+y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
 
-x = 3.21f;
-chisl = Math.pow((a),(x))- Math.pow ((b),(x));
-znamen = Math.log(a/b)/ Math.log(10);
-y = chisl/znamen * Math.pow ((a*b),(1/3));
+x = 3.9f;
+chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
+znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
+y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
-
-}
+        } 
 
 }
