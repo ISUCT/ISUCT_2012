@@ -3,7 +3,19 @@ package com.isuct.programming;
 public class HelloWorld {
 
 	public static void main(String [] args){
-		System.out.println("Hello world 2");
-                System.out.println("worked in netbeans too");
+            int a=4;
+            if(a>0){
+              if(a<=3){    
+                  System.out.println("а меньше,либо равно 3");
+              }
+              if(a>3){
+                  System.out.println("а больше 3");
+              }
+            }else{
+            }        
+		System.out.println("а меньше, либо равно 0");
+                
 	}
 }
+
+        
