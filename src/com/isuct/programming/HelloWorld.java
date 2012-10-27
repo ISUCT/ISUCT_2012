@@ -44,4 +44,36 @@ public class HelloWorld {
 		y = chisl/znamen;
 		System.out.println("Дано = "+x+" Посчитано = "+y);
 	}
+                float a = 1.1f;
+		float b = 0.09f;
+{               float x = 1.21f;
+         double chisl = Math.log(Math.pow(x, 2))-1;
+         double znam1 = (Math.pow(x, 2)*a)-b;
+         double znam = Math.log(znam1)/Math.log(5);
+         double y = chisl/znam;
+    System.out.println("X = "+x+" Y = "+y);}
+{               float x = 1.76f;
+double chisl = Math.log(Math.pow(x, 2))-1;
+         double znam1 = (a*=Math.pow(x, 2))-b;
+         double znam = Math.log(znam1)/Math.log(5);
+         double y = chisl/znam;
+    System.out.println("X = "+x+" Y = "+y);}
+{               float x = 2.53f;
+         double chisl = Math.log(Math.pow(x, 2))-1;
+         double znam1 = (Math.pow(x, 2)*a)-b;
+         double znam = Math.log(znam1)/Math.log(5);
+         double y = chisl/znam;
+   System.out.println("X = "+x+" Y= "+y);}
+{               float x = 3.48f;
+        double chisl = Math.log(Math.pow(x, 2))-1;
+        double znam1 = (Math.pow(x, 2)*a)-b;
+        double znam = Math.log (znam1)/Math.log(5);
+        double y = chisl/znam;
+   System.out.println("X = "+x+" Y= "+y);}
+{               float x = 4.52f;
+        double chisl = Math.log(Math.pow(x, 2))-1;
+        double znam1 = (Math.pow(x, 2)*a)-b;
+        double znam = Math.log(znam1)/Math.log(5);
+        double y = chisl/znam;
+   System.out.println("X = "+x+" Y= "+y);}
 }
