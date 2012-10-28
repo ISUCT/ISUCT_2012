@@ -42,8 +42,8 @@ public class HelloWorld {
 		chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
 		znamen = Math.log(a+x)/Math.log(2);
 		y = chisl/znamen;
-		System.out.println("Дано = "+x+" Посчитано = "+y);
-	}
+		System.out.println("Дано = "+x+" Посчитано = "+y);	
+        }
                 float a = 1.1f;
 		float b = 0.09f;
 {               float x = 1.21f;
