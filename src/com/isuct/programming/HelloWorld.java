@@ -75,5 +75,6 @@ double chisl = Math.log(Math.pow(x, 2))-1;
         double znam1 = (Math.pow(x, 2)*a)-b;
         double znam = Math.log(znam1)/Math.log(5);
         double y = chisl/znam;
-   System.out.println("X = "+x+" Y= "+y);}
+   System.out.println("X = "+x+" Y= "+y);
+}
 }
