@@ -18,10 +18,8 @@ public class HelloWorld{
        
        /**
      * @param args the command line arguments
-     */
-   
-        public static void main(String[] args) {
-        // TODO code application logic here
+     */   
+        
        
                 double xn = 3.5f;
 		double dx=0.6;
