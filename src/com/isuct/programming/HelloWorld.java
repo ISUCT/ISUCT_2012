@@ -2,40 +2,33 @@ package com.isuct.programming;
 
 public class HelloWorld {
 
-	public static void main(String[] args){
-float x = 1.88f;
-float a = 0.8f;
-float b = 0.4f;
-double chisl;
-chisl = Math.pow(Math.pow(x-2,2), 1/3)+Math.pow(Math.abs(x+b),(1/5));
-double znamen;
-znamen = Math.pow((Math.pow(x,2)-Math.pow((a+b),2)),1/9);
-double y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
+public static void main(String [] args){
+float x = 1.28f;
+float a = 1.6f;
+double y= (Math.pow ((a),(x+1)*(x-1))- (Math.log((x-1)*(x+1))/Math.log(10)) + Math.pow (((x-1)*(x+1)),(1/3)));
+System.out.println("x=");
 
-x = 2.26f;
-chisl = Math.pow(Math.pow(x-2,2), 1/3)+Math.pow(Math.abs(x+b),(1/5));
-znamen = Math.pow((Math.pow(x,2)-Math.pow((a+b),2)),1/9);
-y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
+x = 1.36f;
+a = 1.6f;
+y= (Math.pow ((a),(x+1)*(x-1))- (Math.log((x-1)*(x+1))/Math.log(10)) + Math.pow (((x-1)*(x+1)),(1/3)));
+System.out.println("x=");
 
-x = 3.84f;
-chisl = Math.pow(Math.pow(x-2,2), 1/3)+Math.pow(Math.abs(x+b),(1/5));
-znamen = Math.pow((Math.pow(x,2)-Math.pow((a+b),2)),1/9);
-y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
+x = 2.47f;
+a = 1.6f;
+y= (Math.pow ((a),(x+1)*(x-1))- (Math.log((x-1)*(x+1))/Math.log(10)) + Math.pow (((x-1)*(x+1)),(1/3)));
+System.out.println("x=");
 
-x = 4.55f;
-chisl = Math.pow(Math.pow(x-2,2), 1/3)+Math.pow(Math.abs(x+b),(1/5));
-znamen = Math.pow((Math.pow(x,2)-Math.pow((a+b),2)),1/9);
-y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
+x = 3.68f;
+a = 1.6f;
+y= (Math.pow ((a),(x+1)*(x-1))- (Math.log((x-1)*(x+1))/Math.log(10)) + Math.pow (((x-1)*(x+1)),(1/3)));
+System.out.println("x=");
 
-x = -6.21f;
-chisl = Math.pow(Math.pow(x-2,2), 1/3)+Math.pow(Math.abs(x+b),(1/5));
-znamen = Math.pow((Math.pow(x,2)-Math.pow((a+b),2)),1/9);
-y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
-}
+x = 4.56f;
+a = 1.6f;
+y= (Math.pow ((a),(x+1)*(x-1))- (Math.log((x-1)*(x+1))/Math.log(10)) + Math.pow (((x-1)*(x+1)),(1/3)));
+System.out.println("x=");
+
+
 
 }
+        }
