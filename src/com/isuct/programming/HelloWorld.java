@@ -10,48 +10,14 @@ package com.isuct.programming;
  */
 public class HelloWorld{
 
-     /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-       
-       /**
-     * @param args the command line arguments
-     */   
-        
-       
-                double xn = 3.5f;
-		double dx=0.6;
-		double xk=6.5;
-		double a = -2.5f;
-		double b = 3.4f;
-		double Chisl=0;
-		double Znamen=0;
-		double y=0;
-       
-                   /*Для первого уравнения системы.*/ 
-        
-        for(double x=3.5; x<=6.5; x=(x + 0.6)){  
-            if(x<5){
-            
-               Chisl = Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
-               Znamen = Math.pow((x+a), 2);
-               y = Chisl / Znamen;
-        
-        
-                  /*Для второго уравнения системы.*/
-       }else{
-               Chisl=Math.pow((a+(b*x)), 2.5);
-               Znamen=1.8+ Math.pow((Math.cos(a*x)),3);
-               y = Chisl / Znamen;
-              
-          }    
-        System.out.println("x=" + x + "y=" + y);
-    
-    }
+      public static void main(String [] args){
+		Calc defaultConstr = new Calc(-2.5,3.4,3.5,0.6,6.5);
+		System.out.println("------------Решаем задачу В------------");
+		defaultConstr.taskB(-2.5,3.4);
+		System.out.println("------------Решаем задачу A ------------");
+		defaultConstr.taskA(-2.5,3.4,3.5,0.6,6.5);
+		System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
+		Calc nDefConstr = new Calc(-2.5,3.4,3.5,0.6,6.5);
+		nDefConstr.taskA();
+		}
 }
-        }
-
-
-
