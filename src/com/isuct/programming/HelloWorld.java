@@ -4,17 +4,22 @@ public class HelloWorld {
 
 
 	public static void main(String [] args){
-		//Решим задачи А и задачу B с использованием внешнего класса Calc
-		//Сперва используем конструктор по умолчанию
-		Calc defaultConstr = new Calc();
-		System.out.println("------------Решаем задачу В------------");
-		defaultConstr.taskB();
-		System.out.println("------------Решаем задачу A ------------");
-		defaultConstr.taskA(1.1,2.0,1,0.2,5);
-		//Решим задачу А - с использованием перегруженного конструктора
-		System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
-		Calc nDefConstr = new Calc(1.1,2.0,1,0.5,7);
-		//тогда мы можем вызвать метод без передачи дополнительных параметров
-		nDefConstr.taskA();
-		}
+        double xn = 0.11f;
+        double xk = 0.36;
+        double dx = 0.05;
+        for (double x = 0.11; x <= 0.36; x = (x + 0.05)) {
+            y =  (Math.pow(Math.sin(x),3)+(Math.pow(Math.cos(x),3))*Math.log10(x));
+                    System.out.println("x=" + x + "y=" + y);
+
+            Calc defaultConstr = new Calc(0.2, 0.3, 0.38, 0.43, 0.57);
+            System.out.println("------------Решаем задачу В------------");
+            defaultConstr.taskB(0.2,0.3);
+            System.out.println("------------Решаем задачу A —----------");
+            defaultConstr.taskA(0.2, 0.3, 0.38, 0.43, 0.57);
+            System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
+            Calc nDefConstr = new Calc(0.2, 0.3, 0.38, 0.43, 0.57);
+            nDefConstr.taskA();
+
+        }
+    }
 }
