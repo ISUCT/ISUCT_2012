@@ -4,17 +4,16 @@ public class HelloWorld {
 
 
 	public static void main(String [] args){
-		//Решим задачи А и задачу B с использованием внешнего класса Calc
-		//Сперва используем конструктор по умолчанию
-		Calc defaultConstr = new Calc();
-		System.out.println("------------Решаем задачу В------------");
-		defaultConstr.taskB();
-		System.out.println("------------Решаем задачу A ------------");
-		defaultConstr.taskA(1.1,2.0,1,0.2,5);
-		//Решим задачу А - с использованием перегруженного конструктора
-		System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
-		Calc nDefConstr = new Calc(1.1,2.0,1,0.5,7);
-		//тогда мы можем вызвать метод без передачи дополнительных параметров
-		nDefConstr.taskA();
+		 double x;
+                double xn=0.11f;
+                double xk=0.36f;
+                double dx=0.05;
+                double a=2.0;
+                double b=3.0;
+		double y;
+                for( x=xn;x<=xk;x=x+dx){
+                        y =Math.asin(Math.pow(x, a)) + Math.acos(Math.pow(x, b));
+                        System.out.println("x="+x+ " y="+y);
+                    }
 		}
 }
