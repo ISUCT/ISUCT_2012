@@ -5,18 +5,15 @@ public class Calc {
     private double xn;
     private double dx;
     private double xk;
-    private double a;
-    private double b;
-
+   
     /**
      * Конструктор по умолчанию
      */
-    public Calc(double aA, double aB, double aXn, double aDx, double aXk) {
+    public Calc( double aXn, double aDx, double aXk) {
         xn = aXn;
         dx = aDx;
         xk = aXk;
-        a = aA;
-        b = aB;
+       
     }
 
 
