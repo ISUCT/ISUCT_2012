@@ -7,6 +7,7 @@ public class HelloWorld {
         double xn = 0.11f;
         double xk = 0.36;
         double dx = 0.05;
+        double y = 0;
         for (double x = 0.11; x <= 0.36; x = (x + 0.05)) {
             y = (Math.pow(Math.sin(x),3)+(Math.pow(Math.cos(x),3))*Math.log10(x));
                     System.out.println("x=" + x + "y=" + y);
