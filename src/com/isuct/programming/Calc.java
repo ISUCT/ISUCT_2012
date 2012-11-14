@@ -58,7 +58,7 @@ public class Calc {
 		double chisl ;
 		double znamen ;
 		double y ;
-		double[] Xarray = new double[]{3.78,4.51,6.58,1.2,2.2};
+		double[] Xarray = new double[]{2.2,3.78,4.51,6.58,1.2};
 		for (double x : Xarray) {
 			if (x < 5) {
 				// вычисляем числитель Math.pow(число, степень)
