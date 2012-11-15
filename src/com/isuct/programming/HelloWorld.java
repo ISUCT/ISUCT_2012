@@ -6,6 +6,8 @@ public class HelloWorld {
         double a = 4.1;
         double b = 2.7f;
         
+        //Здесь 1-я лабораторная (на сколько я понял) - в 3-й её не обязательно оставлять
+        
         {float x = 1.9f;
                 double chisl = (a) * Math.pow((x), (1 / 2)) - (b) * Math.log(x) / Math.log(5);
                 double znamen = Math.log(x - 1) / Math.log(10);
@@ -37,7 +39,7 @@ public class HelloWorld {
                 System.out.println("x = " + x + " y = " + y);}
         
         
-            Calc defaultConstr = new Calc(1.9, 2.15, 2.34, 2.73, 3.16);
+            Calc defaultConstr = new Calc();
             System.out.println("------------Решаем задачу В------------");
 
             defaultConstr.taskB();
