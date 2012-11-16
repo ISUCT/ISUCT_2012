@@ -2,7 +2,6 @@ package com.isuct.programming;
 
 public class HelloWorld {
 
-
 	public static void main(String [] args){
 		//Решим задачи А и задачу B с использованием внешнего класса Calc
 		//Сперва используем конструктор по умолчанию
