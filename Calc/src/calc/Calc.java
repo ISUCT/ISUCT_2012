@@ -64,7 +64,6 @@ double chisl = 0;
 double znam = 0;
 double y = 0; 
 for (double x = xn; x<=xk; x+=dx){
-    /** Здесь тоже ругается. Почему?!!!*/
     if (x<5){
     /*Опять ругается на переменную*/
     chisl = Math.log(Math.pow(x, 2)-1);
