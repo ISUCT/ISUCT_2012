@@ -36,7 +36,20 @@ chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
 znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
 y = chisl/znamen;
 System.out.println("x="+x+"y="+y);
-		}
+		
+        Calc defaultConstr = new Calc(1.9, 2.15, 2.34, 2.73, 3.16);
+            System.out.println("------------Решаем задачу В------------");
+
+            defaultConstr.taskB();
+            System.out.println("------------Решаем задачу A —----------");
+
+            defaultConstr.taskA(1.9, 2.15, 2.34, 2.73, 3.16);
+            System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
+
+            Calc nDefConstr = new Calc(1.9, 2.15, 2.34, 2.73, 3.16);
+            nDefConstr.taskA();
+            
         }
+}
 
 
