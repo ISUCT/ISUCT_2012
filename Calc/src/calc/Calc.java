@@ -49,6 +49,7 @@ double y = 0;
 for (double x = xn, x<=xk, x+=dx){ 
     /** Почему ругается?*/
     if (x<5){
+    /** Почему видит переменную х через раз?*/
     chisl = Math.log(Math.pow(x, 2)-1);
     znam = Math.log(a*Math.pow(x, 2)-b)/Math.log(5);
     y = chisl / znam; 
@@ -66,6 +67,7 @@ double y = 0;
 for (double x = xn, x<=xk, x+=dx){
     /** Здесь тоже ругается. Почему?!!!*/
     if (x<5){
+    /*Опять ругается на переменную*/
     chisl = Math.log(Math.pow(x, 2)-1);
     znam = Math.log(a*Math.pow(x, 2)-b)/Math.log(5);
     y = chisl / znam; 
