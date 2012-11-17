@@ -46,7 +46,7 @@ public void taskA () {
 double chisl = 0;
 double znam = 0;
 double y = 0;
-for (double x = xn, x<=xk, x+=dx){ 
+for (double x = xn; x<=xk; x+=dx){ 
     /** Почему ругается?*/
     if (x<5){
     /** Почему видит переменную х через раз?*/
@@ -64,7 +64,7 @@ public void taskA (double a, double b, double xn, double xk, double dx){
 double chisl = 0;
 double znam = 0;
 double y = 0; 
-for (double x = xn, x<=xk, x+=dx){
+for (double x = xn; x<=xk; x+=dx){
     /** Здесь тоже ругается. Почему?!!!*/
     if (x<5){
     /*Опять ругается на переменную*/
