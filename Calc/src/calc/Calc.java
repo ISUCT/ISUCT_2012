@@ -46,8 +46,7 @@ public void taskA () {
 double chisl = 0;
 double znam = 0;
 double y = 0;
-for (double x = xn; x<=xk; x+=dx){ 
-    /** Почему ругается?*/
+for (double x = xn; x<=xk; x+=dx){
     if (x<5){
     /** Почему видит переменную х через раз?*/
     chisl = Math.log(Math.pow(x, 2)-1);
