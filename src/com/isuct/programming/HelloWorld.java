@@ -2,18 +2,15 @@ package com.isuct.programming;
 
 public class HelloWorld {
 
+    public static void main(String[] args) {
 
-	public static void main(String [] args){
-		 double x;
-                double xn=0.11f;
-                double xk=0.36f;
-                double dx=0.05;
-                double a=2.0;
-                double b=3.0;
-		double y;
-                for( x=xn;x<=xk;x=x+dx){
-                        y =Math.asin(Math.pow(x, a)) + Math.acos(Math.pow(x, b));
-                        System.out.println("x="+x+ " y="+y);
-                    }
-		}
+        Calc defaultConstr = new Calc(1.2, 0.48, 0.7, 0.3, 2.2);
+        System.out.println("------------Решаем задачу В------------");
+        defaultConstr.taskB(1.2, 0.48, 0.7, 0.3, 2.2);
+        System.out.println("------------Решаем задачу A ------------");
+        defaultConstr.taskA(1.2, 0.48, 0.7, 0.3, 2.2);
+        System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
+        Calc nDefConstr = new Calc(1.2, 0.48, 0.7, 0.3, 2.2);
+
+    }
 }
