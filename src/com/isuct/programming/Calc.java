@@ -8,6 +8,9 @@ public class Calc {
     private double a;
     private double b;
 
+    
+    
+    
     public Calc() {
     }
 
