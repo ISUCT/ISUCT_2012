@@ -30,3 +30,4 @@ tmp/**/*
 *.bak
 
 /build/
+/JavaProject1/build/
