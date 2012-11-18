@@ -27,10 +27,10 @@ public class Calc {
 		xk = aXk;
 		a = aA;
 	}
-
+        
 	public void taskB() {
             
-		double a = 2.25f;
+                double a = 2.25f;
 		double y;
 		double[] Xarray = new double[] { 1.31,1.39,1.44,1.56,1.92 };
 		for (double x : Xarray) {			
