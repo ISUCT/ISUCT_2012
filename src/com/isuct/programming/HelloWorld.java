@@ -2,7 +2,7 @@ package com.isuct.programming;
 public class HelloWorld {
     
         public static void main(String[] args) {                     
-            
+                       
             Calc defaultConstr = new Calc();
             
             System.out.println("------------Решаем задачу В------------");
