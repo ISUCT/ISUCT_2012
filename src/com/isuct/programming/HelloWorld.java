@@ -14,6 +14,7 @@ public class HelloWorld {
             System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
             Calc nDefConstr = new Calc(2.25, 1.2, 0.3, 2.7);
             nDefConstr.taskA();
+                      
         }      
 }
 
