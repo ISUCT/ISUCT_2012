@@ -30,3 +30,5 @@ tmp/**/*
 *.bak
 
 /build/
+/JavaApplication1/build/
+/JavaApplication1/dist/
