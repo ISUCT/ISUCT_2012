@@ -41,10 +41,12 @@ public class Calc {
 	 */
 	public Calc(double aA, double aB,double aXn,double aDx, double aXk){
 		//Устанавливаем значения закрытых полей
-		xn=1.28;
-		dx=0.4;
-		xk=3.28;
-		b=2.5;
+		xn=3.2;
+		dx=0.6;
+		xk=6.2;
+                a=0.4;
+		b=0.8;
+               
 	}
 	/**
 	 * Решение задачи B
@@ -58,18 +60,18 @@ public class Calc {
 		for (double x : Xarray) {
 			if (x < 5) {
 				// вычисляем числитель Math.pow(число, степень)
-				chisl =1+ Math.sin(Math.pow(b, 3))  + Math.pow(xn, 3);
+				chisl =Math.pow(a, x)  - (Math.pow(b, x))*(Math.pow((a*b),(1/3f)));
 				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
 				// логарифм основания)
-				znamen = Math.pow(Math.pow(b, 3)  + Math.pow(xn, 3),(1/3f));
+				znamen = Math.log10(a/b);
 				// вычисляем y
 				y = chisl / znamen;
 			} else {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl =1+ Math.sin(Math.pow(b, 3))  + Math.pow(xn, 3);
+				// вычисляем числитель Math.pow(чи
+				chisl =Math.pow(a, x)  - Math.pow(b, x)*(Math.pow((a*b),(1/3f)));
 				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
 				// логарифм основания)
-				znamen = Math.pow(Math.pow(b, 3)  + Math.pow(xn, 3),(1/3f));
+				znamen = Math.log10(a/b);
 				// вычисляем y
 				y = chisl / znamen;
 			}
@@ -89,16 +91,16 @@ public class Calc {
 		for(double x=xn;x<=xk;x+=dx){
 		    if(x<5){
 			//вычисляем числитель Math.pow(число, степень)
-			chisl =1+ Math.sin(Math.pow(b, 3))  + Math.pow(xn, 3);
+			chisl =Math.pow(a, x)  - Math.pow(b, x)*(Math.pow((a*b),(1/3f)));
 			//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-			znamen = Math.pow(Math.pow(b, 3)  + Math.pow(xn, 3),(1/3f));
+			znamen = Math.log10(a/b);
 			//вычисляем y
 			y= chisl/znamen;
 		    }else{
 			//вычисляем числитель Math.pow(число, степень)
-			chisl =1+ Math.sin(Math.pow(b, 3))  + Math.pow(xn, 3);
+			chisl = Math.pow(a, x)  - Math.pow(b, x)*(Math.pow((a*b),(1/3f)));
 			//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-			znamen = Math.pow(Math.pow(b, 3)  + Math.pow(xn, 3),(1/3f));
+			znamen = Math.log10(a/b);
 			//вычисляем y
 			y= chisl/znamen;
 		    }
@@ -123,16 +125,16 @@ public class Calc {
 		for(double x=xn;x<=xk;x+=dx){
 		    if(x<5){
 			//вычисляем числитель Math.pow(число, степень)
-			chisl =1+ Math.sin(Math.pow(b, 3))  + Math.pow(xn, 3);
+			chisl =Math.pow(a, x)  - Math.pow(b, x)*(Math.pow((a*b),(1/3f)));
 			//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-			znamen = Math.pow(Math.pow(b, 3)  + Math.pow(xn, 3),(1/3f));
+			znamen = Math.log10(a/b);
 			//вычисляем y
 			y= chisl/znamen;
 		    }else{
 			//вычисляем числитель Math.pow(число, степень)
-			chisl =1+ Math.sin(Math.pow(b, 3))  + Math.pow(xn, 3);
+			chisl = Math.pow(a, x)  - Math.pow(b, x)*(Math.pow((a*b),(1/3f)));
 			//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-			znamen = Math.pow(Math.pow(b, 3)  + Math.pow(xn, 3),(1/3f));
+			znamen = Math.log10(a/b);
 			//вычисляем y
 			y= chisl/znamen;
 		    }
