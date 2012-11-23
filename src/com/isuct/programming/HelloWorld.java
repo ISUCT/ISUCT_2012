@@ -1,4 +1,4 @@
-package com.isuct.programming;
+﻿package com.isuct.programming;
 
 public class HelloWorld {
 
@@ -43,4 +43,5 @@ public class HelloWorld {
  	 	Calc nDefConstr = new Calc(1.28, 1.36, 2.47, 3.6, 3.16);
  	 nDefConstr.taskA();
     }
+
 }

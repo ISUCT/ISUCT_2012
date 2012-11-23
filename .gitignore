@@ -1,3 +1,4 @@
+
 #java specific
 *.class
 # Package Files #
@@ -30,4 +31,3 @@ tmp/**/*
 *.bak
 
 /build/
-/JavaProject1/build/
