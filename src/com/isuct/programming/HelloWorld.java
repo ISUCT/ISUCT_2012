@@ -3,6 +3,7 @@ package com.isuct.programming;
 public class HelloWorld {
 
     public static void main(String[] args) {
+
         Moto kawasaki = new Moto(2000, 1100, 700, 170, 2, 21750, 0, 0, 0, 0);
         kawasaki.setFuelLevel(20);
         kawasaki.setRashod(8);
@@ -11,6 +12,7 @@ public class HelloWorld {
             + kawasaki.getCoords()[0] + " y= " + kawasaki.getCoords()[1]);
             } else {	
         System.out.println("Kawasaki Не хватит топлива");
+        
         }
         if (kawasaki.move("y", 500)) {
         System.out.println("Kawasaki Новые координаты теперь х= "	
