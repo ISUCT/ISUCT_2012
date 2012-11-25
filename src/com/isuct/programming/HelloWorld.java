@@ -4,6 +4,7 @@ import com.isuct.programming.Car;
 
 public class HelloWorld {
 
+    
 	public static void main(String[] args) {
 		// создаем классику
 		Car vaz2107 = new Car(3000, 1400, 1800);
