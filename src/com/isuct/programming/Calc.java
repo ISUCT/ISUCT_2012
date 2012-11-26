@@ -7,16 +7,14 @@ package com.isuct.programming;
  * y=-------------------------------
  *    log(a+x)по основанию 2
  *    
- * если x<5
  * 
- *     3
- *    x + a + b
  * y=-------------------------------
- *         2
- *    sin(x  )
+ *         
  *    
- *    a=1.1
- *    b=2
+ *    a=1.6
+ *    xn=1.2
+ *    dx=0.5
+ *    xk=3.7  
  */
 public class Calc {
 	/**
@@ -26,7 +24,6 @@ public class Calc {
 	private double dx;
 	private double xk;
 	private double a;
-	private double b;
 	/**
 	 * Конструктор по умолчанию
 	 */
@@ -39,43 +36,25 @@ public class Calc {
 	 * @param aDx - дельта
 	 * @param aXk - конечное значение Х
 	 */
-	public Calc(double aA, double aB,double aXn,double aDx, double aXk){
+	public Calc(double aA,double aXn,double aDx, double aXk){
 		//Устанавливаем значения закрытых полей
 		xn=aXn;
 		dx=aDx;
 		xk=aXk;
 		a=aA;
-		b=aB;
 	}
 	/**
 	 * Решение задачи B
 	 */
 	public void taskB(){
 		// Объявляем и инициализируем переменные
-		double chisl = 0;
-		double znamen = 0;
 		double y = 0;
-		double[] Xarray = new double[]{1.0,1.3,1.6,1.9,2.1,2.3,7.1,8.5,9.9};
+		double[] Xarray = new double[]{1.28,1.36,2.47,3.68,4.56};
 		for (double x : Xarray) {
-			if (x < 5) {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl = Math.pow(x, 3) + a + b;
-				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
-				// логарифм основания)
-				znamen = Math.sin(Math.pow(x, 2));
-				// вычисляем y
-				y = chisl / znamen;
-			} else {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl = Math.pow(x, 2) + Math.pow((x + b), (1 / 3f));
-				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
-				// логарифм основания)
-				znamen = Math.log(a + x) / Math.log(2);
-				// вычисляем y
-				y = chisl / znamen;
-			}
+		
+                 y = Math.pow(a,(Math.pow(x,2)-1))- Math.log10(Math.pow(x,2)-1) + Math.pow((Math.pow(x,2)-1),(1/3f));
 			// Выводим результат
-			System.out.println("Икс равен = " + x + " Игрек равен = " + y);
+		System.out.println("Икс равен = " + x + " Игрек равен = " + y);
 		}
 	}
 	
@@ -84,29 +63,15 @@ public class Calc {
 	 */
 	public void taskA(){
 		//Объявляем и инициализируем переменные
-		double chisl=0;
-		double znamen=0;
 		double y=0;
 		for(double x=xn;x<=xk;x+=dx){
-		    if(x<5){
-			//вычисляем числитель Math.pow(число, степень)
-			chisl = Math.pow(x, 3) + a + b;
-			//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-			znamen = Math.sin(Math.pow(x,2));
-			//вычисляем y
-			y= chisl/znamen;
-		    }else{
-			//вычисляем числитель Math.pow(число, степень)
-			chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
-			//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-			znamen = Math.log(a+x)/Math.log(2);
-			//вычисляем y
-			y= chisl/znamen;
-		    }
+		     y = Math.pow(a,(Math.pow(x,2)-1))- Math.log10(Math.pow(x,2)-1) + Math.pow((Math.pow(x,2)-1),(1/3f));
+		    System.out.println("Икс равен = "+x+" Игрек равен = "+y);
+                }
 		//Выводим результат
-		System.out.println("Икс равен = "+x+" Игрек равен = "+y);
+		
 		}
-	}
+
 	/**
 	 * Перегруженный метод вычисления задачи, с возможностью
 	 * передачи параметров
@@ -116,30 +81,15 @@ public class Calc {
 	 * @param a
 	 * @param b
 	 */
-	public void taskA(double a, double b,double xn,double dx, double xk){
+	public void taskA(double a,double xn,double dx, double xk){
 		//Объявляем и инициализируем переменные
-		double chisl=0;
-		double znamen=0;
 		double y=0;
 		for(double x=xn;x<=xk;x+=dx){
-		    if(x<5){
-			//вычисляем числитель Math.pow(число, степень)
-			chisl = Math.pow(x, 3) + a + b;
-			//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-			znamen = Math.sin(Math.pow(x,2));
-			//вычисляем y
-			y= chisl/znamen;
-		    }else{
-			//вычисляем числитель Math.pow(число, степень)
-			chisl = Math.pow(x, 2) + Math.pow((x+b), (1/3f));
-			//вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный логарифм основания)
-			znamen = Math.log(a+x)/Math.log(2);
-			//вычисляем y
-			y= chisl/znamen;
-		    }
+		 y = Math.pow(a,(Math.pow(x,2)-1))- Math.log10(Math.pow(x,2)-1) + Math.pow((Math.pow(x,2)-1),(1/3f));
 		//Выводим результат
 		System.out.println("Икс равен = "+x+" Игрек равен = "+y);
 		}
 	}
-	
 }
+	
+
