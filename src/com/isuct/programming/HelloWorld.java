@@ -21,7 +21,7 @@ public static void main(String[] args) {
 		} else {
 			System.out.println("Baron Не хватит уровня еды");
 		}
-		System.out.println("Dak Проверим координаты х= "
+		System.out.println("Baron Проверим координаты х= "
 				+ Baron.getCoords()[0] + " y= " + 
 Baron.getCoords()[1]);
 
