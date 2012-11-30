@@ -6,7 +6,7 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 // создаем кошку Мусю
-cat Musya = new cat(100, 20, 4, 500, 3);
+cat Musya = new cat(50, 20, 4, 300, 3);
 Musya.setPosition(0, 0);
 Musya.setSleepLevel(10);
 Musya.setRashod(7);
