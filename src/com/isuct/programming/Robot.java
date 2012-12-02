@@ -93,9 +93,22 @@ public class Robot {
         this.y = y;
     }
 
+    public void speak() {
+        System.out.println("Привет хозяин!Меня зовут Y155");
+    }
+
+    public void hibernate() {
+        System.out.println("Досвидания!");
+
+    }
+
+    public void lowBattery() {
+        System.out.println("Хозяин.Поставь меня на зарядку!");
+    }
+
     public boolean move(String axis, int distance) {
         // Емкость аккумулятора 
-        float needBatteryLevel = charge * distance / 60;
+        float needBatteryLevel = charge - distance;
         if (needBatteryLevel < 0) {
             return false;
         } else {
@@ -109,8 +122,5 @@ public class Robot {
             needBatteryLevel = charge;
             return true;
         }
-    }
-
-    public void speak(String[] name) {
     }
 }
