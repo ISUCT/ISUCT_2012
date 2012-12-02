@@ -2,6 +2,7 @@ package com.isuct.programming;
 
 public class Calc {
 
+    
     private double xn;
     private double dx;
     private double xk;

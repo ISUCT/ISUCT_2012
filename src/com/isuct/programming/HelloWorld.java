@@ -2,6 +2,7 @@ package com.isuct.programming;
 
 public class HelloWorld {
 
+    
     public static void main(String[] args) {
 
         Calc defaultConstr = new Calc(1.2, 0.48, 0.7, 0.3, 2.2);
