@@ -1,9 +1,10 @@
 package com.isuct.programming;
 
+import com.isuct.programming.Car;
+
 public class HelloWorld {
 
-
-	public static void main(String [] args){
+	public static void main(String[] args) {
 		//Решим задачи А и задачу B с использованием внешнего класса Calc
 		//Сперва используем конструктор по умолчанию
 		//Теперь все методы внутри класса CALC нам просто возвращают массивы значений
@@ -32,5 +33,6 @@ public class HelloWorld {
 		for (int i=0;i<taskA1[0].length;i++){
 			System.out.println("X= "+taskA1[0][i]+" Y= "+ taskA1[1][i]);
 		}
-		}
+		
+	}
 }
