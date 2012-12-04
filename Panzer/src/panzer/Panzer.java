@@ -22,7 +22,6 @@ private int lenght;
 private int height;
 private int width;
 private int weight;
-private int color;
 /** 
  * Кординаты (месторасположение)
  */
@@ -36,7 +35,7 @@ private int lenghtOfTrack;
 /**
  * Параметры расхода топлива
  */
-private float floutLevel;
+private float fuelLevel;
 private float rashod;
 /**
  * Конструктор по умолчанию
@@ -55,12 +54,52 @@ public Panzer (int lenght, int height, int winght, int weightOfTrack, int lenght
     this.lenghtOfTrack = Math.abs (lenghtOfTrack);
    }
 public int getHeight (){
-return this.height;
+    return this.height;
 }
 public int getWidth (){
     return this.width;
 }
-publc int getLenght (){
+public int getLenght (){
+    return this.lenght;
 }
-
+public int getWinght (){
+    return this.weight;
+    }
+public int getWeightOfTrack () {
+    return this.weightOfTrack;
+}
+public int getLenghtOfTrack () {
+    return this.lenghtOfTrack;   
+}
+public int [] getCoordinations (){
+    return new int [] {x,y};
+}
+public float getFuelLevel (){
+    return this.fuelLevel;
+}
+public float getRashod () {
+    return this.rashod;
+}
+public void setPosition (int x, int y) {
+    this.x=x;
+    this.x=x;
+}
+public boolean move(String axis, int distance ){
+    float needFuel = distance*rashod/1000;
+    if ((fuelLevel-needFuel)<0){
+        return false;
+    }else{
+        if (axis.equals ("x")){
+            x+=distance;
+        }else if(axis.equals("y")){
+            y+=distance;
+        }else{
+            return false;
+        }
+        fuelLevel-=needFuel;
+        return true;
+    }
+    
+}
+}
 
