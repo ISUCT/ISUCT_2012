@@ -2,54 +2,45 @@ package com.isuct.programming;
 
 public class HelloWorld {
 
+    public static void main(String[] args) {
 
-	public static void main(String [] args){
-		float x = 1.1f;
-float b = 2.5f;
-double chisl;
-chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
-double znamen;
-znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
-double y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
+        Car Mazda = new Car(4900, 2000, 2000, 1690, 4, 21750, 0, 0, 0, 0);
+        Mazda.setFuelLevel(50);
+        Mazda.setRashod(7);
+        if (Mazda.move("x", 100)) {
+            System.out.println(" Mazda Новые координаты теперь х= "
+                    + Mazda.getCoords()[0] + " y= " + Mazda.getCoords()[1]);
+        } else {
+            System.out.println("Mazda Не хватит топлива");
 
-x = 2.4f;
-chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
-znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
-y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
-
-x = 3.6f;
-chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
-znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
-y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
-
-x = 1.7f;
-chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
-znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
-y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
-
-x = 3.9f;
-chisl = 1+Math.pow(Math.sin(Math.pow(b,3)+Math.pow(x,3)),2);
-znamen = Math.pow((Math.pow(b,3)+Math.pow(x,3)), 1/3);
-y = chisl/znamen;
-System.out.println("x="+x+"y="+y);
-		
-        Calc defaultConstr = new Calc(1.9, 2.15, 2.34, 2.73, 3.16);
-            System.out.println("------------Решаем задачу В------------");
-
-            defaultConstr.taskB();
-            System.out.println("------------Решаем задачу A —----------");
-
-            defaultConstr.taskA(1.9, 2.15, 2.34, 2.73, 3.16);
-            System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
-
-            Calc nDefConstr = new Calc(1.9, 2.15, 2.34, 2.73, 3.16);
-            nDefConstr.taskA();
-            
         }
+        if (Mazda.move("y", 500)) {
+            System.out.println("Mazda Новые координаты теперь х= "
+                    + Mazda.getCoords()[0] + " y= " + Mazda.getCoords()[1]);
+        } else {
+            System.out.println("mazda Не хватит топлива");
+        }
+        System.out.println("mazda Проверим координаты х= " + Mazda.getCoords()[0]
+                + " y= " + Mazda.getCoords()[1]);
+
+        Car Volvo = new Car(5100, 2000, 2000, 1980, 4, 21750, 0, 0, 0, 0);
+        Volvo.setFuelLevel(60);
+        Volvo.setRashod(5);
+        if (Volvo.move("y", 100)) {
+            System.out.println(" Volvo Новые координаты теперь х= "
+                    + Volvo.getCoords()[0] + " y= " + Volvo.getCoords()[1]);
+
+        } else {
+            System.out.println("Volvo Не хватит топлива");
+        }
+        if (Volvo.move("y", 100)) {
+
+            System.out.println("Volvo Новые координаты теперь х= "
+                    + Volvo.getCoords()[0] + " y= " + Volvo.getCoords()[1]);
+
+        } else {
+
+            System.out.println("Volvo Не хватит топлива");
+        }
+    }
 }
-
-
