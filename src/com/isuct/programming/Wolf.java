@@ -89,13 +89,16 @@ this.age = age;
            if ((sleepLevel - needFuel) < 0) {
                return false;		
            } else {
-               if (axis.equals("x")) {				
-                   x += distance;
-               }else if (axis.equals("y")) {				
-                   y += distance;
-                   } else {			
-                   return false;		
-               }			
+               switch (axis) {
+                   case "x":
+                       x += distance;
+                       break;
+                   case "y":
+                       y += distance;
+                       break;			
+                   default:
+                       return false;
+               }
                sleepLevel -= needFuel;		
                return true;		
            }	
