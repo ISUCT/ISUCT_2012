@@ -15,12 +15,14 @@ public class Panzer {
  * высота
  * ширина
  * вес
- * Все параметры вводятся в см. Вес - в тоннах
+ * экипаж
+ * Параметры длина, высота, ширина вводятся в мм, вес - в тоннах
  */    
 private int lenght;
 private int height;
 private int width;
 private int weight;
+private int crew;
 /** 
  * Кординаты (месторасположение)
  */
@@ -35,20 +37,24 @@ private int lenghtOfTrack;
  * Параметры расхода топлива
  */
 private float fuelLevel;
-private float rashod;
+private float consumption;
 /**
  * Конструктор по умолчанию
  */
 
 public Panzer (int lenght, int height, int width){
+    //Длина, высота, ширина
     this.lenght = Math.abs (lenght);
     this.height = Math.abs (height);
     this.width = Math.abs (width);
 }
-public Panzer (int lenght, int height, int winght, int weightOfTrack, int lenghtOfTrack){
+public Panzer (int lenght, int height, int width, int winght, int crew, int weightOfTrack, int lenghtOfTrack){
+    //Длина, высота, ширина, вес, экипаж, ширина гусеницы, длина гусеницы
     this.lenght = Math.abs (lenght);
     this.height = Math.abs (height);
     this.width = Math.abs (width);
+    this.weight = Math.abs (weight);
+    this.crew = Math.abs (crew);
     this.weightOfTrack = Math.abs (weightOfTrack);
     this.lenghtOfTrack = Math.abs (lenghtOfTrack);
    }
@@ -64,6 +70,9 @@ public int getLenght (){
 public int getWinght (){
     return this.weight;
     }
+public int getCrew (){
+    return this.crew;
+}
 public int getWeightOfTrack () {
     return this.weightOfTrack;
 }
@@ -76,20 +85,28 @@ public int [] getCoordinations (){
 public float getFuelLevel (){
     return this.fuelLevel;
 }
-public float getRashod () {
-    return this.rashod;
+public float getConsumption () {
+    return this.consumption;
 }
 public void setPosition (int x, int y) {
     this.x=x;
     this.x=x;
 }
+public void setFuelLevel (float fuel){
+    this.fuelLevel=fuel;
+}
+public void setConsumption (float consumption){
+    this.consumption=consumption;
+}
+
 public boolean move(String axis, int distance ){
-    float needFuel = distance*rashod/1000;
+    float needFuel = distance*consumption/100;
     if ((fuelLevel-needFuel)<0){
         return false;
     }else{
         if (axis.equals ("x")){
             x+=distance;
+            /*axis(ось) equal(равный)*/
         }else if(axis.equals("y")){
             y+=distance;
         }else{
