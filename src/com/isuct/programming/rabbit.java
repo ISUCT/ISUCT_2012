@@ -3,32 +3,32 @@ package com.isuct.programming;
 public class HelloWorld {
 
 	public static void main(String[] args) {
-		// создаем кролика Сёму
-		rabbit Sema = new rabbit(300, 50, 550, 600, 4, 250, 4);
-		Sema.setPosition(0, 0);
-		Sema.setfoodLevel(20);
-		Sema.setRashod(8);
+		// создаем кролика Степана
+		rabbit Stepan = new rabbit(200, 100, 120, 400, 4, 190, 3);
+		Stepan.setPosition(0, 0);
+		Stepan.setfoodLevel(30);
+		SStepan.setRashod(8);
 
-		System.out.println("Кролик Сёма: уровень еды = 20");
+		System.out.println("Кролик Степан: уровень еды = 30");
 
-		if (Sema.move("x", 100)) {
-			System.out.println("Сёма: Новые координаты теперь х= "
-					+ Sema.getCoords()[0] + " y= " + Sema.getCoords()[1]);
+		if (Stepan.move("x", 100)) {
+			System.out.println("Степан: Новые координаты теперь х= "
+					+ Stepan.getCoords()[0] + " y= " + Stepan.getCoords()[1]);
 		} else {
-			System.out.println("Сёме: Не хватит уровня еды");
+			System.out.println("Степан: Хочет кушать");
 		}
 
-		if (Sema.move("y", 500)) {
-			System.out.println("Сёма: Новые координаты теперь х= "
-					+ Sema.getCoords()[0] + " y= " + Sema.getCoords()[1]);
+		if (Stepan.move("y", 400)) {
+			System.out.println("Степан: Новые координаты теперь х= "
+					+ Stepan.getCoords()[0] + " y= " + Stepan.getCoords()[1]);
 		} else {
-			System.out.println("Сёма: Не хватит уровня еды");
+			System.out.println("Степан: Хочет кушать");
 		}
-		System.out.println("Сёма Проверим координаты х= "
-				+ Sema.getCoords()[0] + " y= " + Sema.getCoords()[1]);
+		System.out.println("Степан Проверим координаты х= "
+				+ Stepan.getCoords()[0] + " y= " + Stepan.getCoords()[1]);
 
 		// создаем кролика Васю
-		Rabbit Vasya = new Rabbit(320, 50, 500, 620, 4, 250, 7);
+		Rabbit Vasya = new Rabbit(300, 150, 150, 500, 4, 250, 4);
 		Vasya.setPosition(0, 0);
 		Vasya.setfoodLevel(90);
 		Vasya.setRashod(8);
@@ -39,14 +39,14 @@ public class HelloWorld {
 			System.out.println("Вася Новые координаты теперь х= "
 					+ Vasya.getCoords()[0] + " y= " + Vasya.getCoords()[1]);
 		} else {
-			System.out.println("Вася Не хватит уровня еды");
+			System.out.println("Вася Хочет кушать");
 		}
 
 		if (Vasya.move("y", 100)) {
 			System.out.println("Вася Новые координаты теперь х= "
 					+ Vasya.getCoords()[0] + " y= " + Vasya.getCoords()[1]);
 		} else {
-			System.out.println("Вася Не хватит уровня еды");
+			System.out.println("Вася Хочет кушать");
 		}
 	}
 

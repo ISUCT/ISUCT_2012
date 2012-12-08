@@ -5,7 +5,7 @@ public class HelloWorld {
 
 
 /**
- * Класс по проиводству кроликов - домашних на ферме Тихомировых
+ * Класс по проиводству кроликов на ферме Тихомировых
  * 
  * @author Тимоша
  * 
@@ -21,13 +21,13 @@ public class rabbit {
 	public int width;
 	public int weight;
 
-	// Параметры: количество ног, длина ушей, цвет, возраст
+	// Параметры: количество лап, длина ушей, цвет, возраст
 	private int numOfLegs;
 	private int lenOfNeck;
 	private int colour;
 	private int age;
 
-	// Параметры расхода (для передвижения кролика :)
+	// Параметры расхода (для передвижения кролика)
 	private float foodLevel;
 	private float rashod;
 
@@ -47,7 +47,7 @@ public class rabbit {
 	 * @param wt
 	 *            масса 
 	 * @param nL
-	 *            число ног
+	 *            число лап
 	 * @param lN
 	 *            длина ушей 
 	 * @param age
@@ -59,26 +59,23 @@ public class rabbit {
 	 */
 	public rabbit(final int length, final int wh, final int ht, final int wt,
 			int nL, final int lN, final int age) {
-		// Присваиваем переданные нам значения - закрытым членам класса
 
 		this.length = Math.abs(length);
 		this.height = Math.abs(ht);
 		this.width = Math.abs(wh);
 		this.weight = Math.abs(wt);
 
-		if (nL < 2) {
-			nL = 2;
+		if (nL < 4) {
+			nL = 4;
 		} else {
-			if (nL > 2) {
-				nL = 2;
+			if (nL > 4) {
+				nL = 4;
 			}
 		}
 
 		this.numOfLegs = nL;
 		this.lenOfNeck = lN;
 	}
-
-	// Методы получения значений закрытых параметров класса
 
 	public int getLength() {
 		return this.length;
@@ -119,8 +116,7 @@ public class rabbit {
 	public float getRashod() {
 		return this.rashod;
 	}
-
-	// Методы - устанавливающие значения
+        
 	public void setRashod(float rashod) {
 		this.rashod = rashod;
 	}
@@ -143,7 +139,7 @@ public class rabbit {
 	
 
 	public boolean move(String axis, int distance) {
-		// Посчитаем сколько еды надо для передвижения
+		//Сколько еды нужно для передвижения
 		float needFood = distance * rashod / 100;
 		if ((foodLevel - needFood) < 0) {
 			return false;
