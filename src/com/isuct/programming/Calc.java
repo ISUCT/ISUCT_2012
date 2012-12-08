@@ -14,94 +14,98 @@ public class Calc {
 	private double xk;
 	private double a;
 	private double b;
-	
-	public Calc(){
-
+        
+        public Calc() {
 	}
-	
-	public Calc(double aA, double aB,double aXn,double aDx, double aXk){
-		xn=aXn;
-		dx=aDx;
-		xk=aXk;
-		a=aA;
-		b=aB;
+        public Calc(double aA, double aB, double aXn, double aDx, double aXk) {
+		// Устанавливаем значения закрытых полей
+		xn = aXn;
+		dx = aDx;
+		xk = aXk;
+		a = aA;
+		b = aB;
 	}
-	/**
-	 * Решение задачи B
-	 */
-	public void taskB(double aA, double aB){
-		double chisl;
-		double znamen ;
-		double y;
-		double[] Xarray = new double[]{1.0,1.3,1.6,1.9,2.1,2.3,7.1,8.5,9.9};
-		for (double x : Xarray) {
-			if (x < 5) {
-		chisl = Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
-                znamen = Math.pow((x+a), 2);
-                y = chisl / znamen;
+        public double[][] taskB(double[] arrayX) {
+		// Объявляем и инициализируем переменные
+	   double chisl = 0;
+	   double znamen = 0;
+	   double y = 0;
+		// Создаем 2мерный массив для хранения результатов
+	   double[][] result = new double[2][arrayX.length];
+	   int i = 0;
+	   for (double x : arrayX) {
+                if (x < 5) {
+                    chisl =Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
+                    znamen = Math.sin(Math.pow(x, 2));
+                    y = chisl / znamen;
+                } else {
+                    chisl=Math.pow((a+(b*x)), 2.5);
+                    znamen =1.8+ Math.pow((Math.cos(a*x)),3);
+                    y = chisl / znamen;
+                    }  
+                result[0][i] = x;
+		result[1][i] = y;
+		i++;
+                   }
+           return result;
+                }
         
         
-                  /*Для второго уравнения системы.*/
-                }else{
-               chisl=Math.pow((a+(b*x)), 2.5);
-               znamen=1.8+ Math.pow((Math.cos(a*x)),3);
-               y = chisl / znamen;
-              
-
-          }    
-                 System.out.println("x=" + x + "y=" + y);
-		}
-	}
-
-	/**
-	 * Решение задачи А
-	 */
-	public void taskA(){
+          public double[][] taskA() {
+            
+              double chisl = 0;
+	      double znamen = 0;
+	      double y = 0;
+                
+              int nElem = (int) Math.round(((xk-xn)/dx+1));
+              double[][] result = new double[2][nElem];
+	      int i=0;
 		
-		double chisl;
-		double znamen;
-		double y;
-		for(double x=xn;x<=xk;x+=dx){
-		    if(x<5){
-            chisl = Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
-            znamen = Math.pow((x+a), 2);
-            y = chisl / znamen;
-        
-        
-                  /*Для второго уравнения системы.*/
-       }else{
-               chisl=Math.pow((a+(b*x)), 2.5);
-               znamen=1.8+ Math.pow((Math.cos(a*x)),3);
-               y = chisl / znamen;
-              
-          }    
-        System.out.println("x=" + x + "y=" + y);
-    
+              for (double x = xn; x < xk; x += dx) {
+                   if (x < 5) {
+                      chisl =Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
+                      znamen = Math.sin(Math.pow(x, 2));
+                      y = chisl / znamen;
+                   } else {
+                      chisl=Math.pow((a+(b*x)), 2.5);
+                      znamen =1.8+ Math.pow((Math.cos(a*x)),3);
+                      y = chisl / znamen;
+                  }
+                   result[0][i]=x;
+		   result[1][i]=y;
+		   i++;
 		}
+	       return result;
 	}
-	
-	public void taskA(double a, double b,double xn,double dx, double xk){
-		//Объявляем и инициализируем переменные
-		double chisl;
-		double znamen;
-		double y;
-		for(double x=xn;x<=xk;x+=dx){
-		    if(x<5){
-			chisl = Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
-               znamen = Math.pow((x+a), 2);
-               y = chisl / znamen;
-        
-        
-                  /*Для второго уравнения системы.*/
-       }else{
-               chisl=Math.pow((a+(b*x)), 2.5);
-               znamen=1.8+ Math.pow((Math.cos(a*x)),3);
-               y = chisl / znamen;
-              
-          }    
-        System.out.println("x=" + x + "y=" + y);
-    
-		}
+                
+                
+               public double[][] taskA(double a, double b, double xn, double dx, double xk) {
+                    double chisl = 0;
+		    double znamen = 0;
+		    double y = 0;
+                    
+                    int nElem = (int) Math.round(((xk-xn)/dx+1));
+		    double[][] result = new double[2][nElem];
+		    int i=0;
+		    for (double x = xn; x < xk; x += dx) {
+                    
+                    if (x < 5) {
+                       chisl =Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
+                       znamen = Math.sin(Math.pow(x, 2));
+                       y = chisl / znamen;
+                    } else {
+                       chisl=Math.pow((a+(b*x)), 2.5);
+                       znamen =1.8+ Math.pow((Math.cos(a*x)),3);
+                       y = chisl / znamen;
+                         }
+               result[0][i]=x;
+	       result[1][i]=y;
+	       i++;
+                        }
+	     return result;
 	}
+                }
 
-}
+
+
+
