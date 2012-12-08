@@ -1,4 +1,5 @@
 package com.isuct.programming;
+
 /**
  * Выносим реализацию задач в отдельный класс
  * @author jskonst
