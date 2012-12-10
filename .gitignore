@@ -1,0 +1,32 @@
+#java specific
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#netbeans ignore personal stuff 
+nbproject/
+build.xml
+manifest.mf
+
+#eclipse ignore personal stuff
+#.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+.launch
+.classpath
+.settings/
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.tmp
+*.bak
+
+/build/
