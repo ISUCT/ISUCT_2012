@@ -19,13 +19,13 @@ public class HelloWorld {
 		}
 		
 		System.out.println("------------Решаем задачу A ------------");
-		double taskA[][]=defaultConstr.taskA(4.1,2.7,1.2,5.2,0.8);
+		double taskA[][]=defaultConstr.taskA(4.1,2.7,1.2,0.8,5.2);
 		for (int i=0;i<taskA[0].length;i++){
 			System.out.println("X= "+taskA[0][i]+" Y= "+ taskA[1][i]);
 		}
 		//Решим задачу А - с использованием перегруженного конструктора
 		System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
-		Calc nDefConstr = new Calc(4.1,2.7,1.2,5.2,0.8);
+		Calc nDefConstr = new Calc(4.1,2.7,1.2,0.8,5.2);
 		//тогда мы можем вызвать метод без передачи дополнительных параметров
 		double taskA1[][]=nDefConstr.taskA();
 		for (int i=0;i<taskA1[0].length;i++){
