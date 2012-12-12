@@ -9,6 +9,7 @@ package com.isuct.programming;
  * @author Stud_6
  */
 public class Penguin {
+    private String Name;
     private int Age;
     private String Colour;
     private int Weight;
@@ -16,7 +17,8 @@ public class Penguin {
     private String Habitat;
     private int Feet;
 
-    public Penguin(int A, String C, int W, String F, String H,int Fe ) {
+    public Penguin(String N, int A, String C, int W, String F, String H,int Fe ) {
+        Name=N;
         Age = A;
         Colour = C;
         Weight = W;
@@ -34,9 +36,12 @@ public class Penguin {
             }
 
        
-
+    
     }
-
+    public String getName(){
+        return this.Name;
+    
+    }
     public int getAge() {
         return this.Age;
     }
