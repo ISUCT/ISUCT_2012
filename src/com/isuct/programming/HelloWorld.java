@@ -6,7 +6,7 @@ public class HelloWorld {
 
         Calc defaultConstr = new Calc();
         System.out.println("------------Решаем задачу В------------");
-        double taskB[][] = defaultConstr.taskB(new double[]{1.2, 0.48, 0.7, 0.3, 2.2});
+        double taskB[][] = defaultConstr.taskB(new double[]{0.25, 0.36,0.56,0.94, 1.28});
         for (int i = 0; i < taskB[0].length; i++) {
             System.out.println("X= " + taskB[0][i] + " Y= " + taskB[1][i]);
         }
