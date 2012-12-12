@@ -1,17 +1,93 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.isuct.programming;
+
+/**
+ *
+ * @author stud_5
+ */
 public class HelloWorld {
-    public static void main(String[] args) {
 
-float a = 0.1f;
-float b = 0.5f;
+    private int length;
+    private int height;
+    private int width;
+    private int weight;
+    private int cargoWeight;
+    private int numOfWheels;
+    private int numOfDors;
+    private int numOfSeets;
+    private double fuelLevel;
+    private int rashod;
+    private int colour;
 
-float Xn = 0.15f;
-float Xk = 1.37f;
-float dX = 0.25f;
-float y;
- for(double x=0.15;x<=1.37;x=(x+0.25)){             
-            y=(float) (a+Math.pow(Math.tan(b*x),2)/ b+Math.pow(Math.tan(a*x),2));            
-            System.out.println("x=" + x + "y=" + y);	
-        }	
+    /**
+     * Конструктор для создания машин
+     *
+     * @param length длина
+     * @param wh ширина
+     * @param ht высота
+     * @param wt масса
+     * @param nW число колес
+     * @param nS число сидений
+     * @param nD число дверей
+     */
+    public Car(int length, int wh, int ht, int wt, int nW, int nS, int nD) {
+        this.length = Math.abs(length);
+        this.height = Math.abs(ht);
+        this.width = Math.abs(wh);
+        this.weight = Math.abs(wt);
+
+        if (nW < 2) {
+            nW = 2;
+        } else {
+            if (nW > 3) {
+                if (nW % 2 > 0) {
+                    nW += 1;
+                }
+            }
+
+        }
+        this.numOfWheels = nW;
+        this.numOfSeets = nS;
+        this.numOfDors = nD;
+
+
     }
+
+    public int getLength() {
+        return this.length;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public int getWidth() {
+        return this.width;
+    }
+
+    public int getNumOfWheels() {
+        return this.numOfWheels;
+    }
+    
+    public void move(int distance){
+        fuelLevel -= distance*rashod/100;
+    }
+    
+    public double getFuelLevel(){
+        return this.fuelLevel;
+    }
+    
+    public void setFuelLevel(double fl){
+        this.fuelLevel = fl;
+    }
+    
+    public void setRash(int rasx){
+        this.rashod = rasx;
+    }
+    
+}
+
 } 
