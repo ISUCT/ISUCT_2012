@@ -97,11 +97,11 @@ public class Calc {
 		double znamen = 0;
 		double y = 0;
 		//при создании вычисляем сколько будет элементов
-		int nElem = (int) Math.round(((xk-xn)/dx));
+		int nElem = (int) Math.floor(((xk-xn)/dx));
 
-		double[][] result = new double[2][nElem];
+		double[][] result = new double[2][nElem+1];
 		int i=0;
-		for (double x = xn; x < xk; x += dx) {
+		for (double x = xn; x <= xk; x += dx) {
 			if (x < 5) {
 				// вычисляем числитель Math.pow(число, степень)
 				chisl = Math.pow(x, 3) + a + b;
@@ -142,11 +142,11 @@ public class Calc {
 		double znamen = 0;
 		double y = 0;
 		//при создании вычисляем сколько будет элементов
-		int nElem = (int) Math.round(((xk-xn)/dx));
-		double[][] result = new double[2][nElem];
+		int nElem = (int) Math.floor(((xk-xn)/dx));
+		double[][] result = new double[2][nElem+1];
 		int i=0;
 
-		for (double x = xn; x < xk; x += dx) {
+		for (double x = xn; x <= xk; x += dx) {
 			if (x < 5) {
 				// вычисляем числитель Math.pow(число, степень)
 				chisl = Math.pow(x, 3) + a + b;
