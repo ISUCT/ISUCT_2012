@@ -13,9 +13,7 @@ public class Calc {
     private double xn;
     private double dx;
     private double xk;
-    private double a;
-    private double b;
-
+  
     public Calc() {
     }
 
