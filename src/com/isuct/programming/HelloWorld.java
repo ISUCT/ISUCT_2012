@@ -1,20 +1,77 @@
-package com.isuct.programming;
+package com.isuct.programming; 
 
-public class HelloWorld {
 
-public static void main(String [] args){
-//Решим задачи А и задачу B с использованием внешнего класса Calc
-//Сперва используем конструктор по умолчанию
-Calc defaultConstr = new Calc();
-System.out.println("------------Решаем задачу В------------");
-defaultConstr.taskB();
-System.out.println("------------Решаем задачу A —----------");
-defaultConstr.taskA(4.48,3.56,2.78,5.28,3.21);
-//Решим задачу А - с использованием перегруженного конструктора
-System.out.println("------------Решаем задачу A с перегруженным конструктором------------");
-Calc nDefConstr = new Calc(4.48,3.56,2.78,5.28,3.21);
-//тогда мы можем вызвать метод без передачи дополнительных параметров
-nDefConstr.taskA();
-}
-}
+public class HelloWorld { 
+
+
+ public static void main(String[] args) { 
+
+  // создаем классику 
+
+  Tetris tamagoch1 = new Tamagoch(1, 5800, 1); 
+
+                tamagoch1.setIgra(-20); 
+
+  tamagoch1.setBatareya(300); 
+
+
+  if (tamagoch1.zagruzka()) { 
+
+   System.out.println("tamagoch1 Недостаточно заряда аккумулятора. Поменяйте батарейки." ); 
+
+
+                } else { 
+
+   System.out.println("tamagoch1 Игра загружается. Ждите."); 
+
+
+
+                } 
+
+
+                Tetris tamagoch2 = new Tamagoch(2, 8999, 4); 
+
+                tamagoch2.setIgra(-20); 
+
+  tamagoch2.setBatareya(54); 
+
+
+  if (tamagoch2.zagruzka()) { 
+
+   System.out.println("tamagoch2 Недостаточно заряда аккумулятора. Поменяйте батарейки." ); 
+
+
+                } else { 
+
+   System.out.println("tamagoch2 Игра загружается. Ждите."); 
+
+
+
+                } 
+
+
+                Mobile tamagoch3 = new Tamagoch(2, 15000, 8); 
+
+                tamagoch3.setIgra(-20); 
+
+  tamagoch3.setBatareya(0); 
+
+
+  if (tamagoch3.zagruzka()) { 
+
+   System.out.println("tamagoch3 Недостаточно заряда аккумулятора. Поменяйте батарейки." ); 
+
+
+                } else { 
+
+   System.out.println("tamagoch3 Игра загружается. Ждите."); 
+
+
+
+                } 
+
+        } 
+
+
+} 
 
