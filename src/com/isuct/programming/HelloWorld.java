@@ -8,7 +8,7 @@ public class HelloWorld {
 
   // создаем классику 
 
-  Tetris tamagoch1 = new Tamagoch(1, 5800, 1); 
+  Tamagoch tamagoch1 = new Tamagoch(1, 5800, 1); 
 
                 tamagoch1.setIgra(-20); 
 
@@ -29,7 +29,7 @@ public class HelloWorld {
                 } 
 
 
-                Tetris tamagoch2 = new Tamagoch(2, 8999, 4); 
+                Tamagoch tamagoch2 = new Tamagoch(2, 8999, 4); 
 
                 tamagoch2.setIgra(-20); 
 
@@ -50,7 +50,7 @@ public class HelloWorld {
                 } 
 
 
-                Mobile tamagoch3 = new Tamagoch(2, 15000, 8); 
+                Tamagoch tamagoch3 = new Tamagoch(2, 15000, 8); 
 
                 tamagoch3.setIgra(-20); 
 
