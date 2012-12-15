@@ -1,5 +1,3 @@
- 
-
 package com.isuct.programming;
 
 public class Calc {
@@ -113,4 +111,4 @@ public class Calc {
         }
         return result;
     }
-}	 
+}

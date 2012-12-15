@@ -31,4 +31,3 @@ public class CalculateEngine implements ActionListener {
         parent.txtResult.setText(textResult);
     }
 }
-

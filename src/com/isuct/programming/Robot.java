@@ -1,5 +1,3 @@
- 
-
 package com.isuct.programming;
 
 public class Robot {
@@ -125,4 +123,4 @@ public class Robot {
             return true;
         }
     }
-}	 
+}
