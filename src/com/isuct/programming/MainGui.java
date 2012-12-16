@@ -14,20 +14,17 @@ import javax.swing.JTextPane;
 public class MainGui {
 	//Объявление всех компонентов, которые нам нужны
 	
-	
-	
+		
 	//Метки для отображения информации
 	//Их сраз и инициализируем текстом
 	JLabel lblXn = new JLabel("Xn = ");
 	JLabel lblDx = new JLabel("Dx = ");
 	JLabel lblXk = new JLabel("Xk = ");
 	JLabel lblA = new JLabel("a = ");
-	JLabel lblB = new JLabel("b = ");
 	
 	JLabel lblResult = new JLabel("Результат");
 	
 	JTextField txtA = new JTextField();
-	JTextField txtB = new JTextField();
 	JTextField txtXn = new JTextField();
 	JTextField txtDx = new JTextField();
 	JTextField txtXk = new JTextField();
@@ -50,9 +47,7 @@ public class MainGui {
 		//Размещаем компоненты на панель
 		
 		windowContent.add(lblA);
-		windowContent.add(txtA);
-		windowContent.add(lblB);
-		windowContent.add(txtB);
+		windowContent.add(txtA);		
 		windowContent.add(lblXn);
 		windowContent.add(txtXn);
 		windowContent.add(lblDx);
