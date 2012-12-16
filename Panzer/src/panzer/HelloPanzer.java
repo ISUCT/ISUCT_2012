@@ -24,8 +24,10 @@ Panzer T54 = new Panzer (1000, 1000, 2400);
         System.out.println("T54 не хватит топлива");
     }
     if (T54.move("y", 300)){
-        System.out.println("T54 Новые координаты теперь х="+
-                T54.getCoordinations()[] + "y=" + T54.getCoordinations()[1]);
+        System.out.println("T54 Новые координаты теперь х=" +
+                //Не хватало 0 - в масиве
+                T54.getCoordinations()[0] + "y=" + T54.getCoordinations()[1]);
+                
     }else{
         System.out.println("T54 не хватит топлива");    
     }    
