@@ -31,4 +31,5 @@ Panzer T54 = new Panzer (1000, 1000, 2400);
     }    
     System.out.println("T54 проверим кооринаты х =" + T54.getCoordinations()[0]
             + "y =" + T54.getCoordinations()[1]);
-}}
+}
+}
