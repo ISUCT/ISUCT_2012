@@ -99,6 +99,10 @@ public class Calc {
 			i++;
 		}
 		return result;
-	}
-
+        }
 }
+
+	
+
+
+
