@@ -1,5 +1,9 @@
 package com.isuct.programming;
 
+import java.text.DecimalFormat;
+
+import com.isuct.programming.MainGui;
+
 
 public class HelloWorld {
 
@@ -12,6 +16,8 @@ public class HelloWorld {
 		//поскольку у нас теперь есть четкий "вход" и "выход" в каждом методе
 		//Свои "старые лабораторные" я получил отмотав назад в git
 		MainGui myGui = new MainGui(); 
+		
+		
 		
 	}
 }
