@@ -83,7 +83,7 @@ public class Calc {
                     znamen =1.8+ Math.pow((Math.cos(a*x)),3);
                     y = chisl / znamen;
                     }  
-			// Выводим результат
+			
 			result[0][i]=x;
 			result[1][i]=y;
 			i++;
