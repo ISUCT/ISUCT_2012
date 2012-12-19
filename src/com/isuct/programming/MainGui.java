@@ -13,8 +13,7 @@ import javax.swing.JTextPane;
 public class MainGui {
 	//Объявление всех компонентов, которые нам нужны
     
-	
-	
+    
 	
 	//Метки для отображения информации
 	JLabel lblXn = new JLabel("Xn = ");
