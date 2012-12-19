@@ -5,6 +5,7 @@ public class Calc {
 	/**
 	 * Закрытые поля класса
 	 */
+    
 	private double xn;
 	private double dx;
 	private double xk;
