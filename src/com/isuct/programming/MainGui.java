@@ -12,6 +12,7 @@ import javax.swing.JTextPane;
 
 public class MainGui {
 	//Объявление всех компонентов, которые нам нужны
+    
 	
 	
 	
