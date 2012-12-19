@@ -32,7 +32,7 @@ public class MainGui {
 	
 	JTextPane txtResult = new JTextPane();
 	
-	//Кнопка вычислить
+	//Кнопка рассчитать
 	JButton btnCalc = new JButton("Рассчитать");
 	
 	JPanel windowContent;
@@ -67,9 +67,9 @@ public class MainGui {
 		frame = new JFrame("Calculator");
 		frame.setContentPane(windowContent);
 		// делаем размер окна достаточным
-		// для того, чтобы вместить все компоненты
+		// чтобы вместить все компоненты
 		frame.pack();
-		// Наконец, отображаем окно
+		// Отображаем окно
 		frame.setVisible(true);
 
 	}
