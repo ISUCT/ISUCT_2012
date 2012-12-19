@@ -23,7 +23,6 @@ public class MainGui {
 
 	JLabel lblResult = new JLabel("Результат");
 
-	JTextField txtA = new JTextField();
 	JTextField txtXn = new JTextField();
 	JTextField txtDx = new JTextField();
 	JTextField txtXk = new JTextField();
