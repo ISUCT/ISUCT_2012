@@ -91,7 +91,7 @@ public class Calc {
 	/**
 	 * Решение задачи А
 	 */
-	public double[][] taskA() {
+	public double[][] taskA() throws ArrayIndexOutOfBoundsException {
 		// Объявляем и инициализируем переменные
 		double chisl = 0;
 		double znamen = 0;
@@ -136,7 +136,7 @@ public class Calc {
 	 * @param a
 	 * @param b
 	 */
-	public double[][] taskA(double a, double b, double xn, double dx, double xk) {
+	public double[][] taskA(double a, double b, double xn, double dx, double xk) throws ArrayIndexOutOfBoundsException{
 		// Объявляем и инициализируем переменные
 		double chisl = 0;
 		double znamen = 0;

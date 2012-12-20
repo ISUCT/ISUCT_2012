@@ -1,5 +1,6 @@
 package com.isuct.programming;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -9,8 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
-import javax.swing.JTabbedPane;
-import java.awt.BorderLayout;
+
+import com.isuct.programming.CalculateEngine;
 
 
 public class MainGui extends JFrame{
