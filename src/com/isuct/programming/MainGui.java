@@ -4,10 +4,7 @@
  */
 package com.isuct.programming;
 
-/**
- *
- * @author Аня
- */
+
 import java.awt.GridLayout;
 
 import javax.swing.JButton;

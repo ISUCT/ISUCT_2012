@@ -4,10 +4,6 @@
  */
 package com.isuct.programming;
 
-/**
- *
- * @author Аня
- */
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
