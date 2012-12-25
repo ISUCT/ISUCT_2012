@@ -62,9 +62,10 @@ public class Calc {
 
 		for (double x : arrayX) {
 
-			chisl = Math.acos(Math.pow(x, 2) - Math.pow(b, 2));
-			znamen = Math.asin(Math.pow(x, 2) - Math.pow(a, 2));
+			chisl = Math.log10(Math.pow(x, 2) - 1);
+			znamen = Math.log(a * Math.pow(x, 2) - b) / Math.log(5);
 			y = chisl / znamen;
+
 			result[0][i] = x;
 			result[1][i] = y;
 			i++;
@@ -88,8 +89,8 @@ public class Calc {
 		double[][] result = new double[2][nElem + 1];
 		int i = 0;
 		for (double x = xn; x <= xk; x += dx) {
-			chisl = Math.acos(Math.pow(x, 2) - Math.pow(b, 2));
-			znamen = Math.asin(Math.pow(x, 2) - Math.pow(a, 2));
+			chisl = Math.log10(Math.pow(x, 2) - 1);
+			znamen = Math.log(a * Math.pow(x, 2) - b) / Math.log(5);
 			y = chisl / znamen;
 
 			// Выводим результат
@@ -120,8 +121,8 @@ public class Calc {
 		int i = 0;
 
 		for (double x = xn; x <= xk; x += dx) {
-			chisl = Math.acos(Math.pow(x, 2) - Math.pow(b, 2));
-			znamen = Math.asin(Math.pow(x, 2) - Math.pow(a, 2));
+			chisl = Math.log10(Math.pow(x, 2) - 1);
+			znamen = Math.log(a * Math.pow(x, 2) - b) / Math.log(5);
 			y = chisl / znamen;
 
 			// Выводим результат
