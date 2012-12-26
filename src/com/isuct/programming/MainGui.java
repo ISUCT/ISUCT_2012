@@ -1,6 +1,8 @@
 package com.isuct.programming;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -9,13 +11,16 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
+import com.isuct.programming.CalculateEngine;
 
-public class MainGui {
+
+public class MainGui extends JFrame{
 	//Объявление всех компонентов, которые нам нужны
-    
-    
+
+
 
 	//Метки для отображения информации
+	//Их сраз и инициализируем текстом
 	JLabel lblXn = new JLabel("Xn = ");
 	JLabel lblDx = new JLabel("Dx = ");
 	JLabel lblXk = new JLabel("Xk = ");
@@ -32,44 +37,48 @@ public class MainGui {
 
 	JTextPane txtResult = new JTextPane();
 
-	//Кнопка рассчитать
+	//Кнопка вычислить
 	JButton btnCalc = new JButton("Рассчитать");
 
 	JPanel windowContent;
 	JFrame frame;
-
+	private final JPanel panel = new JPanel();
+	private final JPanel panel_1 = new JPanel();
+	// В конструкторе создаются все компоненты
+	// и добавляются на фрейм с помощью комбинации
+	// Borderlayout и Gridlayout
 	public MainGui() {
 		windowContent = new JPanel();
-		// Задаём схему для этой панели
-		GridLayout bl = new GridLayout(7,2);
-		windowContent.setLayout(bl);
-		//Размещаем компоненты на панель
+		windowContent.setLayout(new BorderLayout(0, 0));
 
-		windowContent.add(lblA);
-		windowContent.add(txtA);
-		windowContent.add(lblB);
-		windowContent.add(txtB);
-		windowContent.add(lblXn);
-		windowContent.add(txtXn);
-		windowContent.add(lblDx);
-		windowContent.add(txtDx);
-		windowContent.add(lblXk);
-		windowContent.add(txtXk);
-		windowContent.add(btnCalc);
-		windowContent.add(new JLabel());
-		windowContent.add(lblResult);
-
-		JScrollPane scrollPane = new JScrollPane(txtResult);
-		windowContent.add(scrollPane);
+		windowContent.add(panel_1, BorderLayout.WEST);
+		panel_1.setLayout(new GridLayout(0, 2, 0, 0));
+		panel_1.add(lblA);
+		panel_1.add(txtA);
+		panel_1.add(lblB);
+		panel_1.add(txtB);
+		panel_1.add(lblXn);
+		panel_1.add(txtXn);
+		panel_1.add(lblDx);
+		panel_1.add(txtDx);
+		panel_1.add(lblXk);
+		panel_1.add(txtXk);
+		windowContent.add(btnCalc, BorderLayout.SOUTH);
 
 		btnCalc.addActionListener(new CalculateEngine(this));
 
 		frame = new JFrame("Calculator");
 		frame.setContentPane(windowContent);
+
+		windowContent.add(panel, BorderLayout.CENTER);
+		panel.add(lblResult);
+
+		JScrollPane scrollPane = new JScrollPane(txtResult);
+		panel.add(scrollPane);
 		// делаем размер окна достаточным
-		// чтобы вместить все компоненты
+		// для того, чтобы вместить все компоненты
 		frame.pack();
-		// Отображаем окно
+		// Наконец, отображаем окно
 		frame.setVisible(true);
 
 	}
