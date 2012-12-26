@@ -17,7 +17,7 @@ public class CalculateEngine implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		Calc defaultConstr = new Calc();
+		Kalc defaultConstr = new Kalc();
 		double a = Double.parseDouble(parent.txtA.getText());		
 		double xn = Double.parseDouble(parent.txtXn.getText());
 		double dx = Double.parseDouble(parent.txtDx.getText());
