@@ -1,18 +1,18 @@
 package com.isuct.programming;
 
-
 public class Calc {
 	/**
 	 * Закрытые поля класса
 	 */
-    
 	private double xn;
 	private double dx;
 	private double xk;
 	private double a;
 	private double b;
 
-	
+	/*
+	 * Конструктор по умолчанию
+	 */
 	public Calc() {
 
 	}
@@ -37,10 +37,10 @@ public class Calc {
 	 */
 	public double[][] taskB(double[] arrayX) {
 		
-		double chisl ;
-		double znamen ;
-		double y;
-		
+		double chisl = 0;
+		double znamen = 0;
+		double y = 0;
+		// Создаем 2мерный массив для хранения результатов
 		double[][] result = new double[2][arrayX.length];
 		int i = 0;
 		for (double x : arrayX) {
@@ -53,7 +53,6 @@ public class Calc {
                     znamen =1.8+ Math.pow((Math.cos(a*x)),3);
                     y = chisl / znamen;
                     }  
-			
 			result[0][i] = x;
 			result[1][i] = y;
 			i++;
@@ -64,12 +63,12 @@ public class Calc {
 	/**
 	 * Решение задачи А
 	 */
-	public double[][] taskA() {
+	public double[][] taskA() throws ArrayIndexOutOfBoundsException {
 		
-		double chisl ;
-		double znamen ;
-		double y ;
-		
+		double chisl = 0;
+		double znamen = 0;
+		double y = 0;
+		//при создании вычисляем сколько будет элементов
 		int nElem = (int) Math.floor(((xk-xn)/dx));
 
 		double[][] result = new double[2][nElem+1];
@@ -84,7 +83,6 @@ public class Calc {
                     znamen =1.8+ Math.pow((Math.cos(a*x)),3);
                     y = chisl / znamen;
                     }  
-			
 			result[0][i]=x;
 			result[1][i]=y;
 			i++;
@@ -101,12 +99,12 @@ public class Calc {
 	 * @param a
 	 * @param b
 	 */
-	public double[][] taskA(double a, double b, double xn, double dx, double xk) {
+	public double[][] taskA(double a, double b, double xn, double dx, double xk) throws ArrayIndexOutOfBoundsException{
 		
-		double chisl ;
-		double znamen;
-		double y ;
-		
+                double chisl = 0;
+		double znamen = 0;
+		double y = 0;
+		//при создании вычисляем сколько будет элементов
 		int nElem = (int) Math.floor(((xk-xn)/dx));
 		double[][] result = new double[2][nElem+1];
 		int i=0;
@@ -121,7 +119,6 @@ public class Calc {
                     znamen =1.8+ Math.pow((Math.cos(a*x)),3);
                     y = chisl / znamen;
                     }  
-			
 			result[0][i]=x;
 			result[1][i]=y;
 			i++;
@@ -130,12 +127,6 @@ public class Calc {
 	}
 
 }
-
-
-
-
-
-
 
 
 
