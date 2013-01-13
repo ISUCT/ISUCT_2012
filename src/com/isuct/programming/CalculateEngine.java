@@ -18,6 +18,8 @@ public class CalculateEngine implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		Calc defaultConstr = new Calc();
+                try{
+                    
 		double a = Double.parseDouble(parent.txtA.getText());		
 		double xn = Double.parseDouble(parent.txtXn.getText());
 		double dx = Double.parseDouble(parent.txtDx.getText());
@@ -30,6 +32,11 @@ public class CalculateEngine implements ActionListener{
 		}
 		
 		parent.txtResult.setText(textResult);
+                	
+		} catch (Exception ex){
+			parent.txtResult.setText("Вы ввели не все поля");
+		}
 	}
 
 }
+

@@ -56,14 +56,15 @@ public class Calc {
 	/**
 	 * Решение задачи А
 	 */
-	public double[][] taskA() {
+        public double[][] taskA() throws ArrayIndexOutOfBoundsException {
+	
 		// Объявляем и инициализируем переменные
             
 		double y = 0;
 		//при создании вычисляем сколько будет элементов
-		int nElem = (int) Math.round((xk-xn)/dx+1);
+		int nElem = (int) Math.round((xk-xn)/dx);
                 
-		double[][] result = new double[2][nElem];
+		double[][] result = new double[2][nElem+1];
 		int i=0;
 		for (double x = xn; x < xk; x += dx) {
 			y = Math.pow(a, (x*x-1))-Math.log(x*x-1)/Math.log(10)+Math.pow((x*x-1), (1/3f));
@@ -83,12 +84,12 @@ public class Calc {
 	 * @param xk
 	 * @param a
 	 */
-	public double[][] taskA(double a, double xn, double dx, double xk) {
+	public double[][] taskA(double a, double xn, double dx, double xk)throws ArrayIndexOutOfBoundsException{{
 		// Объявляем и инициализируем переменные
 		double y = 0;
 		//при создании вычисляем сколько будет элементов
-		int nElem = (int) Math.round((xk-xn)/dx+1);
-		double[][] result = new double[2][nElem];
+		int nElem = (int) Math.round((xk-xn)/dx);
+		double[][] result = new double[2][nElem+1];
 		int i=0;
                 
 		for (double x = xn; x < xk; x += dx) {
@@ -100,7 +101,9 @@ public class Calc {
 		}
 		return result;
         }
+        }
 }
+
 
 	
 
