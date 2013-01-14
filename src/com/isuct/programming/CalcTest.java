@@ -50,7 +50,7 @@ public class CalcTest {
 		// Как Х передали 1, значит и в результате Х должен быть 1
 		assertEquals(7,res[0][0], 0.001);
 		// теперь Y проверим
-		// assertEquals(res[1], 7);
+		assertEquals(18.135, res[1][0],0.001);
 	}
 
 	@Test
