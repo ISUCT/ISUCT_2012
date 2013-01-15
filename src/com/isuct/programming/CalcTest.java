@@ -9,12 +9,13 @@ package com.isuct.programming;
  * @author админ
  */
 public class CalcTest {
+  
     @Test
 	public void testCalc() {
 		// тестируем конструктор (оба варианта)
 		// особо проверять тут не чего
 		Calc simpleConstr = new Calc();
-		Calc defConstr = new Calc(2.25, 1.2, 0.3, 2.7);
+		Calc defConstr = new Calc(0.26, 0.08, 0.66);
 		if (simpleConstr != null & defConstr != null) {
 			// Если конструкторы создали объекты - то все нормально
 			assertTrue(true);
@@ -61,7 +62,7 @@ public class CalcTest {
 		// задача A без передачи параметров
 		// Сперва используем задачу А
 		// в случае конструктора с передачей параметров
-		Calc forTestParam = new Calc(2.25, 1.2, 0.3, 2.7);
+		Calc forTestParam = new Calc(0.26, 0.08, 0.66);
 		double[][] res = forTestParam.taskA();
 
 		assertEquals(0, res[0][0], 0.001);
@@ -92,7 +93,7 @@ public class CalcTest {
 		// Сперва используем задачу А
 		// в случае конструктора с передачей параметров
 		Calc forTestParam = new Calc();
-		double[][] res = forTestParam.taskA(2.25, 1.2, 0.3, 2.7);
+		double[][] res = forTestParam.taskA(0.26, 0.08, 0.66);
 
 		assertEquals(0, res[0][0], 0.001);
 		assertEquals(5, res[0][5], 0.001);
