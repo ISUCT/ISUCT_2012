@@ -8,11 +8,13 @@ public class CalculateEngine implements ActionListener {
 	MainGui parent;
 
 	public CalculateEngine(MainGui gui) {
+		// TODO Auto-generated constructor stub
 		parent = gui;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
 		Calc defaultConstr = new Calc();
 		try {
 			double a = Double.parseDouble(parent.txtA.getText());

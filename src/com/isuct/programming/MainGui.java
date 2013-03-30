@@ -16,7 +16,9 @@ import com.isuct.programming.CalculateEngine;
 
 public class MainGui extends JFrame{
 	//Объявление всех компонентов, которые нам нужны
-		
+	
+	
+	
 	//Метки для отображения информации
 	//Их сраз и инициализируем текстом
 	JLabel lblXn = new JLabel("Xn = ");
@@ -76,7 +78,7 @@ public class MainGui extends JFrame{
 		// делаем размер окна достаточным
 		// для того, чтобы вместить все компоненты
 		frame.pack();
-		// отображаем окно
+		// Наконец, отображаем окно
 		frame.setVisible(true);
 
 	}
