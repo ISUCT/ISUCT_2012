@@ -1,5 +1,6 @@
-package com.isuct.programming;
+﻿package com.isuct.programming;
 
+<<<<<<< HEAD
 public class Car {
 	private int weight;
 	private int length;
@@ -47,5 +48,3 @@ public class Car {
 	public int getNumOfWeeis() {
 		return numOfWheeis;
 	}
-
-}
