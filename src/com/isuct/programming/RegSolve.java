@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 
 public class RegSolve {
 
-    private static String REGEX = "([0-9_A-F]{4})[,]([0-9_A-F]{2})[,]([a-zA-Z0-9]*)[,]([0-9_A-F]{2})$";
+    private static String REGEX = "([0-9_A-F]{4})[,]([0-9_A-F]{2})[,](.*)(\\*[0-9_A-F]{2})";
     private Pattern myPattern = Pattern.compile(REGEX);
 
     public boolean checkNum(String aNum) {
