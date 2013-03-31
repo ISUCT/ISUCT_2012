@@ -15,6 +15,5 @@ public class TestRegExTest {
         boolean expResult = false;
         boolean result = instance.checkNum(aNum);
         assertEquals(expResult, result);
-
     }
 }
