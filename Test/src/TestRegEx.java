@@ -2,7 +2,6 @@
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-
 public class TestRegEx {
     
 private static String REGEX= "\\$(\\D{5}),(\\d{6}),(\\D{1}),([0-9]{4}.[0-9]{4}),([NS]{1}),([0-9]{4}.[0-9]{4}),([WE]{1}),([0-9]{1}.[0-9]{1}),([0-9]{3}.[0-9]{1}),([0-9]{6}),(\\D{2}),\\*([0-9]{2})*";
