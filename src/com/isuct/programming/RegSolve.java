@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
  * @author Stud_6
  */
 public class RegSolve {
-    private static String REGEX="(\\d{3})\\D*(\\d{3})\\D*(\\d{4})\\D*(\\d*)$";
+    private static String REGEX="([!](\\d*)),([0][2]),(\\d\\w\\d\\w\\d{2}\\w{2}),(\\d*),(([0][0])|([0][1])),([*](\\w*)";
     
     private Pattern myPattern=Pattern.compile(REGEX);
     

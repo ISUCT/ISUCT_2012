@@ -1,4 +1,3 @@
-
 package com.isuct.programming;
 
 import java.text.DecimalFormat;
