@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
  * @author Stud_6
  */
 public class RegSolve {
-    private static String REGEX="(\\d{3})\\D*(\\d{3})\\D*(\\d{4})\\D*(\\d*)$";
+    private static String REGEX="([/#][D][/#])(([0-2])([0-9])|([3])([0-1]))(([0])([0-9])|([1])([0-2]))(([0-9])([0-9])),(([0-1])([0-9])|([2])([0-3]))(([0-5])([0-9]))(([0-5])([0-9])),(\\d*).(\\d*);(\\w),(\\d*).(\\d*);(\\w),(\\d*|[N][A]),(\\d*|[N][A]),(\\d*|[N][A]),(\\d*|[N][A]),(\\d*.[0-9]*|[N][A]),(\\d*|[N][A]),(\\d*|[N][A]),(\\d*.\\d*),(\\d*.\\d*),(\\d*|[N][A]),(\\w{3}):([1-3]*):(\\d*),(\\w{3}):([1-3])*:(\\d)*$";
     
     private Pattern myPattern=Pattern.compile(REGEX);
     
