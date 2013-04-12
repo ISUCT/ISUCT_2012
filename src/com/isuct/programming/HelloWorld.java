@@ -1,4 +1,4 @@
-package com.isuct.programming;
+﻿package com.isuct.programming;
 import com.isuct.programming.Deer;
 
 
@@ -9,17 +9,6 @@ import com.isuct.programming.MainGui;
 
 public class HelloWorld {
 
-<<<<<<< HEAD
-    
-    public static void main(String[] args) {
-      Deer D = new Deer("choral","brown",56,50,20,80, 4);
-        System.out.println(D.GetType()+ " " + D.GetColour());
-      
-        
-        
-    }
-}
-=======
 	public static void main(String[] args) {
 		//Решим задачи А и задачу B с использованием внешнего класса Calc
 		//Сперва используем конструктор по умолчанию
@@ -32,4 +21,4 @@ public class HelloWorld {
 		
 	}
 }
->>>>>>> master
+
