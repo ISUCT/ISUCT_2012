@@ -1,6 +1,5 @@
 package com.isuct.programming;
 
-
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -12,36 +11,30 @@ import java.io.PrintWriter;
 
 public class IOButtonSave implements ActionListener {
 
-	/**
-	 * @param args
-	 */
-		
-	public IOButtonSave(MainGui gui){
+	MainGui parent;
+
+	public IOButtonSave(MainGui gui) {
 		// TODO Auto-generated constructor stub
-	
+		parent = gui;
 	}
-	
+
 	String fName = "test.txt";
 
-	
-	public void testWrite() {
-		String tst = "Simple string";
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		System.out.println("Сохранение");
+
+		String textResult = parent.txtResult.getText();
 		File file = new File(fName);
 		try {
 			PrintWriter out = new PrintWriter(file);
-			out.println(tst);
+			out.println(textResult);
 			out.close();
 			assertTrue(true);
 		} catch (FileNotFoundException fnfEx) {
 			fail("Something bad");
 		}
-	}
-
-	
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		System.out.println("Сохранение");
 
 	}
 
