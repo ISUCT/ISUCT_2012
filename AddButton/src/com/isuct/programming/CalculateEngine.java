@@ -3,18 +3,16 @@ package com.isuct.programming;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
-public class CalculateEngine implements ActionListener{
+public class CalculateEngine implements ActionListener {
 
 	MainGui parent;
 
 	public CalculateEngine(MainGui gui) {
 		// TODO Auto-generated constructor stub
-		parent=gui;
+		parent = gui;
 	}
 
 	@Override
-    @SuppressWarnings("empty-statement")
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		Calc defaultConstr = new Calc();

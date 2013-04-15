@@ -2,37 +2,38 @@ package com.isuct.programming;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.FileReader;
+import java.io.IOException;
 
-public class Save implements ActionListener {
+public class IOButtonRead implements ActionListener {
 
-	MainGui parent;
-
-	public Save(MainGui gui) {
+	public IOButtonRead(MainGui gui) {
 		// TODO Auto-generated constructor stub
-		parent = gui;
+
 	}
 
 	String fName = "test.txt";
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("Сохранение");
 
-		String textResult = parent.txtResult.getText();
+		System.out.println("Чтение");
+
 		File file = new File(fName);
 		try {
-			PrintWriter out = new PrintWriter(file);
-			out.println(textResult);
-			out.close();
+			BufferedReader br = new BufferedReader(new FileReader(file));
+			String s;
+			while ((s = br.readLine()) != null) {
+				System.out.print(s);
+			}
+			br.close();
 			assertTrue(true);
-		} catch (FileNotFoundException fnfEx) {
+		} catch (IOException fnfEx) {
 			fail("Something bad");
 		}
-
 	}
 
     private void assertTrue(boolean b) {
