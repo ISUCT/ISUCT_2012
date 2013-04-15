@@ -16,24 +16,17 @@ public class CalculateEngine implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		Calc defaultConstr = new Calc();
-		try {
-			double a = Double.parseDouble(parent.txtA.getText());
-			double b = Double.parseDouble(parent.txtB.getText());
-			double xn = Double.parseDouble(parent.txtXn.getText());
-			double dx = Double.parseDouble(parent.txtDx.getText());
-			double xk = Double.parseDouble(parent.txtXk.getText());
-			double taskA[][] = defaultConstr.taskA(a, b, xn, dx, xk);
-			String textResult = "";
+		double xn = Double.parseDouble(parent.txtXn.getText());
+		double dx = Double.parseDouble(parent.txtDx.getText());
+		double xk = Double.parseDouble(parent.txtXk.getText());
+		double taskA[][] = defaultConstr.taskA(xn, dx, xk);
+		String textResult = "";
 
-			for (int i = 0; i < taskA[0].length; i++) {
-				textResult += "X = " + taskA[0][i] + " Y= " + taskA[1][i]
-						+ "\r\n";
-			}
-
-			parent.txtResult.setText(textResult);
-		} catch (Exception ex) {
-			parent.txtResult.setText("Вы ввели не все поля");
+		for (int i = 0; i < taskA[0].length; i++) {
+			textResult += "X = " + taskA[0][i] + " Y= " + taskA[1][i] + "\r\n";
 		}
+
+		parent.txtResult.setText(textResult);
 	}
 
 }
