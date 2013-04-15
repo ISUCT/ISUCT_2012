@@ -1,5 +1,6 @@
 package com.isuct.programming;
 
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
@@ -14,6 +15,10 @@ import javax.swing.JTextPane;
 import com.isuct.programming.CalculateEngine;
 
 
+/**
+ *
+ * @author Admin
+ */
 public class MainGui extends JFrame{
 	//Объявление всех компонентов, которые нам нужны
 
@@ -39,8 +44,13 @@ public class MainGui extends JFrame{
 
 	//Кнопка вычислить
 	JButton btnCalc = new JButton("Рассчитать");
+	//Кнопка сохранения
+	JButton btnSave = new JButton("Сохранить");
+	//Кнопка чтения
+	JButton btnRead = new JButton("Прочитать");
 
 	JPanel windowContent;
+	JPanel windowContentIO;
 	JFrame frame;
 	private final JPanel panel = new JPanel();
 	private final JPanel panel_1 = new JPanel();
@@ -65,7 +75,11 @@ public class MainGui extends JFrame{
 		panel_1.add(txtXk);
 		windowContent.add(btnCalc, BorderLayout.SOUTH);
 
+
 		btnCalc.addActionListener(new CalculateEngine(this));
+		btnSave.addActionListener(new IOButtonSave(this));
+		btnRead.addActionListener(new IOButtonRead(this));
+
 
 		frame = new JFrame("Calculator");
 		frame.setContentPane(windowContent);
@@ -73,8 +87,12 @@ public class MainGui extends JFrame{
 		windowContent.add(panel, BorderLayout.CENTER);
 		panel.add(lblResult);
 
+
 		JScrollPane scrollPane = new JScrollPane(txtResult);
 		panel.add(scrollPane);
+		panel.add(btnRead);
+		panel.add(btnSave);
+
 		// делаем размер окна достаточным
 		// для того, чтобы вместить все компоненты
 		frame.pack();
