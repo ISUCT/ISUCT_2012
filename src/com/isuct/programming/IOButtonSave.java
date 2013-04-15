@@ -1,6 +1,7 @@
 package com.isuct.programming;
 
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.awt.event.ActionEvent;
@@ -30,17 +31,13 @@ public class IOButtonSave implements ActionListener {
 			PrintWriter out = new PrintWriter(file);
 			out.println(tst);
 			out.close();
-			
+			assertTrue(true);
 		} catch (FileNotFoundException fnfEx) {
 			fail("Something bad");
 		}
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub

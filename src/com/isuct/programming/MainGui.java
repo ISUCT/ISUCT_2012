@@ -85,8 +85,9 @@ public class MainGui extends JFrame{
 		
 		JScrollPane scrollPane = new JScrollPane(txtResult);
 		panel.add(scrollPane);
-		panel.add(btnSave);
 		panel.add(btnRead);
+		panel.add(btnSave);
+		
 		// делаем размер окна достаточным
 		// для того, чтобы вместить все компоненты
 		frame.pack();

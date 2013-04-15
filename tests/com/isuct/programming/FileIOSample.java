@@ -24,7 +24,6 @@ public class FileIOSample {
 	
 		
 	}
-
 	
 	@Test
 	public void testRead() {

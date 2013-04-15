@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.junit.Test;
+
 
 
 public class IOButtonRead implements ActionListener {
@@ -19,7 +21,7 @@ public class IOButtonRead implements ActionListener {
 	}
 	
 	String fName = "test.txt";
-	
+	@Test
 	public void testRead() {
 		
 		File file = new File(fName);
@@ -30,15 +32,12 @@ public class IOButtonRead implements ActionListener {
 			System.out.print(s);
 		}
 		br.close();
-		
+		assertTrue(true);
 		}catch(IOException fnfEx){
 			fail("Something bad");
 		}
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub

@@ -62,36 +62,28 @@ public class Calc {
 		// Создаем 2мерный массив для хранения результатов
 		double[][] result = new double[2][arrayX.length];
 		int i = 0;
+
 		for (double x : arrayX) {
-			if (x < 5) {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl = Math.pow(x, 3) + a + b;
-				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
-				// логарифм основания)
-				znamen = Math.sin(Math.pow(x, 2));
-				// вычисляем y
-				y = chisl / znamen;
-			} else {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl = Math.pow(x, 2) + Math.pow((x + b), (1 / 3f));
-				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
-				// логарифм основания)
-				znamen = Math.log(a + x) / Math.log(2);
-				// вычисляем y
-				y = chisl / znamen;
-			}
-			// Сохраняем результат
-			result[0][i] = x;
+			
+			chisl = Math.acos(Math.pow(x,2)-Math.pow(b,2));
+			znamen = Math.asin(Math.pow(x,2)-Math.pow(a,2));
+			y = chisl/znamen;
+			result[0][i] = x;		
 			result[1][i] = y;
 			i++;
 		}
-		return result;
-	}
+		// Сохраняем результат			
+					
+				
+	
+	return result;	
+}
+
 
 	/**
 	 * Решение задачи А
 	 */
-	public double[][] taskA() throws ArrayIndexOutOfBoundsException {
+	public double[][] taskA() {
 		// Объявляем и инициализируем переменные
 		double chisl = 0;
 		double znamen = 0;
@@ -102,30 +94,17 @@ public class Calc {
 		double[][] result = new double[2][nElem+1];
 		int i=0;
 		for (double x = xn; x <= xk; x += dx) {
-			if (x < 5) {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl = Math.pow(x, 3) + a + b;
-				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
-				// логарифм основания)
-				znamen = Math.sin(Math.pow(x, 2));
-				// вычисляем y
-				y = chisl / znamen;
-			} else {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl = Math.pow(x, 2) + Math.pow((x + b), (1 / 3f));
-				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
-				// логарифм основания)
-				znamen = Math.log(a + x) / Math.log(2);
-				// вычисляем y
-				y = chisl / znamen;
-			}
-			// Выводим результат
-			result[0][i]=x;
-			result[1][i]=y;
-			i++;
-		}
+			chisl = Math.acos(Math.pow(x,2)-Math.pow(b,2));
+			znamen = Math.asin(Math.pow(x,2)-Math.pow(a,2));
+			y = chisl/znamen;
+					
+		// Выводим результат 
+		result[0][i]=x;		
+		result[1][i]=y;		
+		i++;		
+		}	
 		return result;
-	}
+		}
 
 	/**
 	 * Перегруженный метод вычисления задачи, с возможностью
@@ -136,7 +115,7 @@ public class Calc {
 	 * @param a
 	 * @param b
 	 */
-	public double[][] taskA(double a, double b, double xn, double dx, double xk) throws ArrayIndexOutOfBoundsException{
+	public double[][] taskA(double a, double b, double xn, double dx, double xk) {
 		// Объявляем и инициализируем переменные
 		double chisl = 0;
 		double znamen = 0;
@@ -147,29 +126,17 @@ public class Calc {
 		int i=0;
 
 		for (double x = xn; x <= xk; x += dx) {
-			if (x < 5) {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl = Math.pow(x, 3) + a + b;
-				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
-				// логарифм основания)
-				znamen = Math.sin(Math.pow(x, 2));
-				// вычисляем y
-				y = chisl / znamen;
-			} else {
-				// вычисляем числитель Math.pow(число, степень)
-				chisl = Math.pow(x, 2) + Math.pow((x + b), (1 / 3f));
-				// вычисляем знаменатель Логарифм числа по основанию = (натуральный логарифм числа)/ (натуральный
-				// логарифм основания)
-				znamen = Math.log(a + x) / Math.log(2);
-				// вычисляем y
-				y = chisl / znamen;
-			}
-			// Выводим результат
-			result[0][i]=x;
-			result[1][i]=y;
-			i++;
-		}
+			chisl = Math.acos(Math.pow(x,2)-Math.pow(b,2));
+			znamen = Math.asin(Math.pow(x,2)-Math.pow(a,2));
+			y = chisl/znamen;
+					
+		// Выводим результат 
+		result[0][i]=x;		
+		result[1][i]=y;		
+		i++;		
+		}	
 		return result;
-	}
+		}
 
 }
+
