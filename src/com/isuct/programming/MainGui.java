@@ -1,5 +1,6 @@
 package com.isuct.programming;
 
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
@@ -13,10 +14,9 @@ import javax.swing.JTextPane;
 
 import com.isuct.programming.CalculateEngine;
 
-
 public class MainGui extends JFrame{
 	//Объявление всех компонентов, которые нам нужны
-		
+
 	//Метки для отображения информации
 	//Их сраз и инициализируем текстом
 	JLabel lblXn = new JLabel("Xn = ");
@@ -24,20 +24,24 @@ public class MainGui extends JFrame{
 	JLabel lblXk = new JLabel("Xk = ");
 	JLabel lblA = new JLabel("a = ");
 	JLabel lblB = new JLabel("b = ");
-	
+
 	JLabel lblResult = new JLabel("Результат");
-	
-	JTextField txtA = new JTextField();
+      
+        JTextField txtA = new JTextField();
 	JTextField txtB = new JTextField();
 	JTextField txtXn = new JTextField();
 	JTextField txtDx = new JTextField();
 	JTextField txtXk = new JTextField();
-	
+
 	JTextPane txtResult = new JTextPane();
-	
+        
+        
+
 	//Кнопка вычислить
 	JButton btnCalc = new JButton("Рассчитать");
-	
+        JButton sifCalc = new JButton("Сохранить в файл");	
+	JButton rffCalc = new JButton("Читать из файла");
+
 	JPanel windowContent;
 	JFrame frame;
 	private final JPanel panel = new JPanel();
@@ -48,8 +52,9 @@ public class MainGui extends JFrame{
 	public MainGui() {
 		windowContent = new JPanel();
 		windowContent.setLayout(new BorderLayout(0, 0));
-		
+
 		windowContent.add(panel_1, BorderLayout.WEST);
+                
 		panel_1.setLayout(new GridLayout(0, 2, 0, 0));
 		panel_1.add(lblA);
 		panel_1.add(txtA);
@@ -61,16 +66,23 @@ public class MainGui extends JFrame{
 		panel_1.add(txtDx);
 		panel_1.add(lblXk);
 		panel_1.add(txtXk);
+                
 		windowContent.add(btnCalc, BorderLayout.SOUTH);
-		
+                windowContent.add(sifCalc, BorderLayout.NORTH);
+		windowContent.add(rffCalc, BorderLayout.EAST);
+                
 		btnCalc.addActionListener(new CalculateEngine(this));
-		
+                sifCalc.addActionListener(new ListenerForRFF(this)); 
+		rffCalc.addActionListener(new ListenerForSIF(this));
+
 		frame = new JFrame("Calculator");
 		frame.setContentPane(windowContent);
-		
+
 		windowContent.add(panel, BorderLayout.CENTER);
 		panel.add(lblResult);
-		
+            
+                
+
 		JScrollPane scrollPane = new JScrollPane(txtResult);
 		panel.add(scrollPane);
 		// делаем размер окна достаточным
@@ -81,6 +93,6 @@ public class MainGui extends JFrame{
 
 	}
 }
-
+  
 
 
