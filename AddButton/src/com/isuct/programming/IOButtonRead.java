@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+
 public class IOButtonRead implements ActionListener {
 
 	public IOButtonRead(MainGui gui) {
@@ -38,7 +39,7 @@ public class IOButtonRead implements ActionListener {
 
     private void fail(String something_bad) {
         throw new UnsupportedOperationException("Not yet implemented");
-    }
+}
 
     private void assertTrue(boolean b) {
         throw new UnsupportedOperationException("Not yet implemented");

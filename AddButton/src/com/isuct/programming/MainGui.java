@@ -25,11 +25,11 @@ public class MainGui extends JFrame{
 	JLabel lblDx = new JLabel("Dx = ");
 	JLabel lblXk = new JLabel("Xk = ");
 	JLabel lblA = new JLabel("a = ");
-	
+
 	JLabel lblResult = new JLabel("Результат");
 
 	JTextField txtA = new JTextField();
-	
+
 	JTextField txtXn = new JTextField();
 	JTextField txtDx = new JTextField();
 	JTextField txtXk = new JTextField();
@@ -59,7 +59,7 @@ public class MainGui extends JFrame{
 		panel_1.setLayout(new GridLayout(0, 2, 0, 0));
 		panel_1.add(lblA);
 		panel_1.add(txtA);
-	
+
 		panel_1.add(lblXn);
 		panel_1.add(txtXn);
 		panel_1.add(lblDx);

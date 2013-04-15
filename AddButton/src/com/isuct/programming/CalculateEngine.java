@@ -18,7 +18,7 @@ public class CalculateEngine implements ActionListener {
 		Calc defaultConstr = new Calc();
 		try {
 			double a = Double.parseDouble(parent.txtA.getText());
-			
+
 			double xn = Double.parseDouble(parent.txtXn.getText());
 			double dx = Double.parseDouble(parent.txtDx.getText());
 			double xk = Double.parseDouble(parent.txtXk.getText());

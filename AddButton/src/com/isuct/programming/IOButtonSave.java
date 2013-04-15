@@ -37,7 +37,7 @@ public class IOButtonSave implements ActionListener {
 
     private void assertTrue(boolean b) {
         throw new UnsupportedOperationException("Not yet implemented");
-    }
+}
 
     private void fail(String something_bad) {
         throw new UnsupportedOperationException("Not yet implemented");
