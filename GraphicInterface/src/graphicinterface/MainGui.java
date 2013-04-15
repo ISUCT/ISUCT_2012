@@ -22,6 +22,8 @@ public class MainGui {
     JTextField txtXk = new JTextField();
     JTextPane txtResult = new JTextPane();
     JButton btnCalc = new JButton("Рассчитать");
+    JButton btnRec = new JButton("Запись");
+    JButton btnDisp = new JButton("Вывод");
     JPanel windowContent;
     JFrame frame;
 
@@ -39,6 +41,8 @@ public class MainGui {
         windowContent.add(lblXk);
         windowContent.add(txtXk);
         windowContent.add(btnCalc);
+        windowContent.add(btnRec);
+        windowContent.add(btnDisp);
         windowContent.add(new JLabel());
         windowContent.add(lblResult);
 
@@ -46,6 +50,8 @@ public class MainGui {
         windowContent.add(scrollPane);
 
         btnCalc.addActionListener(new CalculateEngine(this));
+        btnRec.addActionListener(new CalcRecord(this));
+        btnDisp.addActionListener(new CalcDisp(this));
 
         frame = new JFrame("Calculator");
         frame.setContentPane(windowContent);
