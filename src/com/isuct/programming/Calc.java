@@ -1,6 +1,8 @@
 package com.isuct.programming;
 
+
 public class Calc {
+
 	/**
 	 * Закрытые поля класса
 	 */
@@ -36,7 +38,7 @@ public class Calc {
 	 * Решение задачи B
 	 */
 	public double[][] taskB(double[] arrayX) {
-		
+
 		double chisl = 0;
 		double znamen = 0;
 		double y = 0;
@@ -64,7 +66,7 @@ public class Calc {
 	 * Решение задачи А
 	 */
 	public double[][] taskA() throws ArrayIndexOutOfBoundsException {
-		
+
 		double chisl = 0;
 		double znamen = 0;
 		double y = 0;
@@ -100,7 +102,7 @@ public class Calc {
 	 * @param b
 	 */
 	public double[][] taskA(double a, double b, double xn, double dx, double xk) throws ArrayIndexOutOfBoundsException{
-		
+
                 double chisl = 0;
 		double znamen = 0;
 		double y = 0;
@@ -127,7 +129,3 @@ public class Calc {
 	}
 
 }
-
-
-
-
