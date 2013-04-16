@@ -1,6 +1,5 @@
 package com.isuct.programming;
 
-
 public class Calc {
 	/**
 	 * Закрытые поля класса
