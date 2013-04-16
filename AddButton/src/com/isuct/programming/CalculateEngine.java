@@ -33,7 +33,8 @@ public class CalculateEngine implements ActionListener {
 			parent.txtResult.setText(textResult);
 		} catch (Exception ex) {
 			parent.txtResult.setText("Вы ввели не все поля");
-		}
+		
+                }
 	}
 
 }

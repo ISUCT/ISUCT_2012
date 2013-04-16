@@ -17,7 +17,8 @@ public class IOButtonSave implements ActionListener {
 
 	String fName = "test.txt";
 
-	@Override
+
+        @Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		System.out.println("Сохранение");
@@ -37,7 +38,7 @@ public class IOButtonSave implements ActionListener {
 
     private void assertTrue(boolean b) {
         throw new UnsupportedOperationException("Not yet implemented");
-}
+    }
 
     private void fail(String something_bad) {
         throw new UnsupportedOperationException("Not yet implemented");

@@ -7,7 +7,7 @@ import java.io.*;
 
 import org.junit.Test;
 
-public class IOButtonSaveTest {
+public class FileIOSample {
 	String fName="test.txt";
 	@Test
 	public void testWrite() {
@@ -23,5 +23,21 @@ public class IOButtonSaveTest {
 		}
 
 
+	}
+
+	@Test
+	public void testRead() {
+		File file = new File(fName);
+		try{
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		String s;
+		while((s=br.readLine())!=null){
+			System.out.print(s);
+		}
+		br.close();
+		assertTrue(true);
+		}catch(IOException fnfEx){
+			fail("Something bad");
+		}
 	}
 }

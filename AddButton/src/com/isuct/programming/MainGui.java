@@ -90,7 +90,8 @@ public class MainGui extends JFrame{
 		// для того, чтобы вместить все компоненты
 		frame.pack();
 		// Наконец, отображаем окно
-		frame.setVisible(true);
+		
+                frame.setVisible(true);
 
 	}
 }

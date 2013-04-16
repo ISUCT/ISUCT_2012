@@ -40,7 +40,8 @@ public class Calc {
 	/**
 	 * Решение задачи B
 	 */
-	public double[][] taskB(double[] arrayX) {
+	
+        public double[][] taskB(double[] arrayX) {
 		// Объявляем и инициализируем переменные
 
 		double y = 0;

@@ -37,11 +37,12 @@ public class IOButtonRead implements ActionListener {
 		}
 	}
 
-    private void fail(String something_bad) {
-        throw new UnsupportedOperationException("Not yet implemented");
-}
-
     private void assertTrue(boolean b) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    private void fail(String something_bad) {
+        
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
