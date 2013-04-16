@@ -1,6 +1,5 @@
 package com.isuct.programming;
 
-
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
@@ -12,7 +11,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-import com.isuct.programming.CalculateEngine;
 
 public class MainGui extends JFrame{
 	//Объявление всех компонентов, которые нам нужны
@@ -72,8 +70,8 @@ public class MainGui extends JFrame{
 		windowContent.add(rffCalc, BorderLayout.EAST);
                 
 		btnCalc.addActionListener(new CalculateEngine(this));
-                sifCalc.addActionListener(new ListenerForRFF(this)); 
-		rffCalc.addActionListener(new ListenerForSIF(this));
+                sifCalc.addActionListener(new ListenerForSIF(this)); 
+		rffCalc.addActionListener(new ListenerForRFF(this));
 
 		frame = new JFrame("Calculator");
 		frame.setContentPane(windowContent);
@@ -94,5 +92,9 @@ public class MainGui extends JFrame{
 	}
 }
   
+
+
+
+
 
 
