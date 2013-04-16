@@ -15,17 +15,11 @@ import javax.swing.JTextPane;
 import com.isuct.programming.CalculateEngine;
 
 
-/**
- *
- * @author Admin
- */
 public class MainGui extends JFrame{
 	//Объявление всех компонентов, которые нам нужны
-
-
-
-	//Метки для отображения информации
-	//Их сраз и инициализируем текстом
+        
+         //Метки для отображения информации
+	 //Их сраз и инициализируем текстом
 	JLabel lblXn = new JLabel("Xn = ");
 	JLabel lblDx = new JLabel("Dx = ");
 	JLabel lblXk = new JLabel("Xk = ");
