@@ -1,4 +1,4 @@
-package com.isuct.programming;
+﻿package com.isuct.programming;
 
 import java.text.DecimalFormat;
 
@@ -6,6 +6,7 @@ import com.isuct.programming.MainGui;
 
 
 public class HelloWorld {
+<<<<<<< HEAD
 
 	public static void main(String[] args) {
 		//Решим задачи А и задачу B с использованием внешнего класса Calc
@@ -17,5 +18,3 @@ public class HelloWorld {
 		//Свои "старые лабораторные" я получил отмотав назад в git
 		MainGui myGui = new MainGui();
 		
-	}
-}
