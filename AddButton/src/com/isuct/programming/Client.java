@@ -35,7 +35,9 @@ public class Client {
 	    BufferedReader inu = new 
 	     BufferedReader(new InputStreamReader(System.in));
 
-	    String fuser,fserver;
+	    
+            
+            String fuser,fserver;
             
             
 	    while ((fuser = inu.readLine())!=null) {
