@@ -2,6 +2,10 @@ package com.isuct.programming;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
 
 public class CalculateEngine implements ActionListener{
@@ -25,18 +29,43 @@ public class CalculateEngine implements ActionListener{
 		double dx = Double.parseDouble(parent.txtDx.getText());
 		double xk = Double.parseDouble(parent.txtXk.getText());
 		double taskA[][]=defaultConstr.taskA(a,xn,dx,xk);
-		String textResult="";
-		
-		for (int i=0;i<taskA[0].length;i++){
-			textResult+="X = "+taskA[0][i] + " Y= "+ taskA[1][i]+ "\r\n";
+		String params = parent.txtA.getText().toString()+","+parent.txtXn.getText()+","+parent.txtDx.getText()+","+parent.txtXk.getText();
+                        
+                         
+
+	    Socket fromserver = null;
+	    String host = "localhost";
+	    
+	    System.out.println("Connecting to... "+host);
+
+	    fromserver = new Socket(host,4444);
+	    
+            BufferedReader in  = new
+	     BufferedReader(new 
+	      InputStreamReader(fromserver.getInputStream()));
+            
+	    PrintWriter    out = new 
+	     PrintWriter(fromserver.getOutputStream(),true);
+	    
+	    String fuser,fserver;
+            
+            fuser=params;
+	      out.println(fuser);
+              String output="";
+              while ((fserver = in.readLine())!=null) {
+                  output=output+fserver+"\r\n";
+                  System.out.println(fserver);
 		}
 		
-		parent.txtResult.setText(textResult);
+		parent.txtResult.setText(output);
                 	
+            out.close();
+	    in.close();
+	    fromserver.close();
+            
 		} catch (Exception ex){
 			parent.txtResult.setText("Вы ввели не все поля");
 		}
 	}
 
 }
-
