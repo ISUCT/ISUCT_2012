@@ -12,7 +12,7 @@ public class ListenerForSIF implements ActionListener {
     MainGui parent;
 
     public ListenerForSIF(MainGui gui) {
-   
+     // TODO Auto-generated constructor stub
 		parent = gui;   
     }
     
@@ -20,7 +20,7 @@ public class ListenerForSIF implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent e) {
-   
+     // TODO Auto-generated method stub
 		System.out.println("Сохранение");
 
 		String textResult = parent.txtResult.getText();
@@ -37,3 +37,6 @@ public class ListenerForSIF implements ActionListener {
      
     }
 }
+
+
+
