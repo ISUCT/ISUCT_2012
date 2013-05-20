@@ -9,15 +9,15 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ListenerForRFF implements ActionListener {
- 
+
+public class ListenerForRFF implements ActionListener{
     public ListenerForRFF(MainGui gui) {
-         
+        // TODO Auto-generated constructor stu   
     }
       String fName = "test.txt";  
     @Override
     public void actionPerformed(ActionEvent e) {
-  
+     // TODO Auto-generated method stub
         
      System.out.println("Чтение");
 
@@ -38,3 +38,8 @@ public class ListenerForRFF implements ActionListener {
     }
     
 }
+
+
+
+
+
