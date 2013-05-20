@@ -1,3 +1,4 @@
+
 package com.isuct.programming;
 
 import java.awt.BorderLayout;
@@ -11,11 +12,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-import com.isuct.programming.CalculateEngine;
-
-
-public class MainGui extends JFrame{
-	//Объявление всех компонентов, которые нам нужны
+/**
+ *
+ * @author stud
+ */
+public class MainGui {
+    //Объявление всех компонентов, которые нам нужны
+	
+	
 	
 	//Метки для отображения информации
 	//Их сраз и инициализируем текстом
@@ -26,21 +30,24 @@ public class MainGui extends JFrame{
 	JLabel lblB = new JLabel("b = ");
 	
 	JLabel lblResult = new JLabel("Результат");
-
+	
 	JTextField txtA = new JTextField();
 	JTextField txtB = new JTextField();
 	JTextField txtXn = new JTextField();
 	JTextField txtDx = new JTextField();
 	JTextField txtXk = new JTextField();
 	
-	JTextPane txtResult = new JTextPane();
+	       JTextPane txtResult = new JTextPane();
 	
 	//Кнопка вычислить
 	JButton btnCalc = new JButton("Рассчитать");
-	JButton sifCalc = new JButton("Сохранить в файл");	
-	JButton rffCalc = new JButton("Читать из файла");
+	//Кнопка сохранения
+	JButton btnSave = new JButton("Сохранить");
+	//Кнопка чтения
+	JButton btnRead = new JButton("Прочитать");
 	JPanel windowContent;
 	JFrame frame;
+//        JPanel windowContentIO; 
 	private final JPanel panel = new JPanel();
 	private final JPanel panel_1 = new JPanel();
 	// В конструкторе создаются все компоненты
@@ -62,15 +69,15 @@ public class MainGui extends JFrame{
 		panel_1.add(txtDx);
 		panel_1.add(lblXk);
 		panel_1.add(txtXk);
+                panel_1.add(btnSave);
+                panel_1.add(btnRead);
 		windowContent.add(btnCalc, BorderLayout.SOUTH);
-		windowContent.add(sifCalc, BorderLayout.SOUTH);
-		windowContent.add(rffCalc, BorderLayout.SOUTH);
 		
 		btnCalc.addActionListener(new CalculateEngine(this));
-                sifCalc.addActionListener(new Listener(this)); 
-		rffCalc.addActionListener(new Listner(this));
-
- 		frame = new JFrame("Calculator");
+		btnSave.addActionListener(new IOButtonSave(this));
+		btnRead.addActionListener(new IOButtonRead(this));
+                
+		frame = new JFrame("Calculator");
 		frame.setContentPane(windowContent);
 		
 		windowContent.add(panel, BorderLayout.CENTER);
