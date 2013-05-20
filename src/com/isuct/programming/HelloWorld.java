@@ -1,8 +1,6 @@
 package com.isuct.programming;
 
-
 import java.text.DecimalFormat;
-
 
 public class HelloWorld {
     
