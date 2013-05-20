@@ -1,19 +1,18 @@
 package com.isuct.programming;
 
-public class Calc {
 
+public class Calc {
 	/**
 	 * Закрытые поля класса
 	 */
+    
 	private double xn;
 	private double dx;
 	private double xk;
 	private double a;
 	private double b;
 
-	/*
-	 * Конструктор по умолчанию
-	 */
+
 	public Calc() {
 
 	}
@@ -38,22 +37,19 @@ public class Calc {
 	 */
 	public double[][] taskB(double[] arrayX) {
 
-		double chisl = 0;
-		double znamen = 0;
-		double y = 0;
-		// Создаем 2мерный массив для хранения результатов
+		double chisl ;
+		double znamen ;
+		double y=0;
+
 		double[][] result = new double[2][arrayX.length];
 		int i = 0;
 		for (double x : arrayX) {
 			if (x < 5) {
-                    chisl =Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
-                    znamen = Math.sin(Math.pow(x, 2));
-                    y = chisl / znamen;
-                } else {
-                    chisl=Math.pow((a+(b*x)), 2.5);
-                    znamen =1.8+ Math.pow((Math.cos(a*x)),3);
-                    y = chisl / znamen;
+                chisl = 1 + Math.pow(Math.log10(x / a), 2);
+                znamen = b - Math.pow(Math.E, x / a);
+                y = chisl / znamen;
                     }  
+
 			result[0][i] = x;
 			result[1][i] = y;
 			i++;
@@ -64,26 +60,23 @@ public class Calc {
 	/**
 	 * Решение задачи А
 	 */
-	public double[][] taskA() throws ArrayIndexOutOfBoundsException {
+	public double[][] taskA() {
 
-		double chisl = 0;
-		double znamen = 0;
-		double y = 0;
-		//при создании вычисляем сколько будет элементов
+		double chisl ;
+		double znamen ;
+		double y=0 ;
+
 		int nElem = (int) Math.floor(((xk-xn)/dx));
 
 		double[][] result = new double[2][nElem+1];
 		int i=0;
 		for (double x = xn; x <= xk; x += dx) {
 			if (x < 5) {
-                    chisl =Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
-                    znamen = Math.sin(Math.pow(x, 2));
-                    y = chisl / znamen;
-                } else {
-                    chisl=Math.pow((a+(b*x)), 2.5);
-                    znamen =1.8+ Math.pow((Math.cos(a*x)),3);
-                    y = chisl / znamen;
+                chisl = 1 + Math.pow(Math.log10(x / a), 2);
+                znamen = b - Math.pow(Math.E, x / a);
+                y = chisl / znamen;
                     }  
+
 			result[0][i]=x;
 			result[1][i]=y;
 			i++;
@@ -100,26 +93,23 @@ public class Calc {
 	 * @param a
 	 * @param b
 	 */
-	public double[][] taskA(double a, double b, double xn, double dx, double xk) throws ArrayIndexOutOfBoundsException{
+	public double[][] taskA(double a, double b, double xn, double dx, double xk) {
 
-                double chisl = 0;
-		double znamen = 0;
-		double y = 0;
-		//при создании вычисляем сколько будет элементов
+		double chisl ;
+		double znamen;
+		double y=0 ;
+
 		int nElem = (int) Math.floor(((xk-xn)/dx));
 		double[][] result = new double[2][nElem+1];
 		int i=0;
 
 		for (double x = xn; x <= xk; x += dx) {
 			if (x < 5) {
-                    chisl =Math.pow(Math.log10(x), 2)*((Math.pow(a, 2))+x);
-                    znamen = Math.sin(Math.pow(x, 2));
-                    y = chisl / znamen;
-                } else {
-                    chisl=Math.pow((a+(b*x)), 2.5);
-                    znamen =1.8+ Math.pow((Math.cos(a*x)),3);
-                    y = chisl / znamen;
+                chisl = 1 + Math.pow(Math.log10(x / a), 2);
+                znamen = b - Math.pow(Math.E, x / a);
+                y = chisl / znamen;
                     }  
+
 			result[0][i]=x;
 			result[1][i]=y;
 			i++;
@@ -128,3 +118,4 @@ public class Calc {
 	}
 
 }
+
