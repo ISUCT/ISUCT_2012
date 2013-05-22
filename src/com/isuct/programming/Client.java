@@ -1,4 +1,6 @@
+
 package com.isuct.programming;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +9,8 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Client {
-	public static void main(String[] args) throws IOException {
+    
+    public static void main(String[] args) throws IOException {
 
 	    System.out.println("Welcome to Client side");
 
@@ -25,8 +28,11 @@ public class Client {
 	    BufferedReader inu = new 
 	     BufferedReader(new InputStreamReader(System.in));
 
-	    String fuser,fserver;
-
+	    String fuser, fserver;
+	    
+	 
+            
+            
 	    while ((fuser = inu.readLine())!=null) {
 	      out.println(fuser);
 	      fserver = in.readLine();

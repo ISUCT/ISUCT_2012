@@ -24,7 +24,10 @@ public class CalculateEngine implements ActionListener {
 			double xk = Double.parseDouble(parent.txtXk.getText());
 			double taskA[][] = defaultConstr.taskA(a, b, xn, dx, xk);
 			String textResult = "";
-
+			
+	
+			
+					
 			for (int i = 0; i < taskA[0].length; i++) {
 				textResult += "X = " + taskA[0][i] + " Y= " + taskA[1][i]
 						+ "\r\n";
