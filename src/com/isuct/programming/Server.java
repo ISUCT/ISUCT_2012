@@ -46,7 +46,7 @@ public class Server {
 				break;
 			// Разделяем строку с запятыми на фрагменты и 
 			// помещаем их в массив
-			// parts 														(Treat Nature Serious)
+			// parts 		(Treat Nature Serious)
 
 			String parts[] = input.split(",");
 
