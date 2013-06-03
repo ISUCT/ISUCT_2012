@@ -1,1 +1,1 @@
-Simple string
+X = 1.0 Y= Infinity
