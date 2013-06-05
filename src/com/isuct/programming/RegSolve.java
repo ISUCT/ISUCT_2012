@@ -37,11 +37,9 @@ public class RegSolve {
     String result="Protocol ";
     if(myMatch.find()){
         for (int i=1;i<=myMatch.groupCount();i++){
-        	//�� ������ �������, 0 ������ - ��� ��� ������ - �������� �� �� �����
-        	//������� ����� � ���������� � 0       незнаю что с комментами, в Eclipse всё было ок
+        
             System.out.println(myMatch.group(i));
-            //������ ��������� � �������������� ������ � ������� �� 
-            //��� ������� ����� �������� ���������
+            
 >>>>>>> remotes/origin/Chernenkov_Maxim
             result+=myMatch.group(i);
         }
