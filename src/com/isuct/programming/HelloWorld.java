@@ -1,7 +1,10 @@
 package com.isuct.programming;
 
-public class HelloWorld {
+import java.text.DecimalFormat;
 
+import com.isuct.programming.MainGui;
+
+<<<<<<< HEAD
 	/**
 	 * Здесь мы просто посчитаем
 	 * @param args
@@ -31,3 +34,20 @@ public class HelloWorld {
         }
 
 }
+=======
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		//Решим задачи А и задачу B с использованием внешнего класса Calc
+		//Сперва используем конструктор по умолчанию
+		//Теперь все методы внутри класса CALC нам просто возвращают массивы значений
+		//а их вывод мы реализуем здесь
+		//Это позволит нам в дальнейшем использовать класс Calc с графическим интерфейсом
+		//поскольку у нас теперь есть четкий "вход" и "выход" в каждом методе
+		//Свои "старые лабораторные" я получил отмотав назад в git
+		MainGui myGui = new MainGui();
+		
+	}
+}
+>>>>>>> 6826e07822b513bfb03d34e8440ef1bafa6f989c
