@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #java specific
 *.class
 # Package Files #
@@ -40,5 +41,8 @@ tmp/**/*
 /bin
 /bin
 /bin
+/bin
+=======
+>>>>>>> remotes/origin/Chernenkov_Maxim
 /bin
 /bin
