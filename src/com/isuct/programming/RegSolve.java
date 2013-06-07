@@ -11,6 +11,7 @@ import java.util.regex.Matcher;
  * @author Stud_6
  */
 public class RegSolve {
+<<<<<<< HEAD
     private static String REGEX="(\\d{3})\\D*(\\d{3})\\D*(\\d{4})\\D*(\\d*)$";
 =======
  * @author Max
@@ -18,6 +19,9 @@ public class RegSolve {
 public class RegSolve {
     private static String REGEX="(([0])([1-9])|([1-2])([0-9])|([3])([0-1]))(([0])([1-9])|([1])([0-2]))(([0-9])([0-9])),(\\w),(\\d*).(\\d*),([N]|[S]),(\\d*).(\\d*),([E]|[W]),(\\d).(\\d),(\\d*).(\\d),(([0])([1-9])|([1-2])([0-9])|([3])([0-1]))(([0])([1-9])|([1])([0-2]))(([0-9])([0-9])),,([*])(\\d*)$";
 >>>>>>> remotes/origin/Chernenkov_Maxim
+=======
+    private static String REGEX="([!](\\d*)),([0][2]),(\\d\\w\\d\\w\\d{2}\\w{2}),(\\d*),(([0][0])|([0][1]))([*])(\\w*)";
+>>>>>>> 7ced590e159e3dc7393259112173ca213f0d0942
     
     private Pattern myPattern=Pattern.compile(REGEX);
     
